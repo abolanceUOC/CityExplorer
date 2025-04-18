@@ -1,0 +1,1326 @@
+@prefix : <https://github.com/abolanceUOC/CityExplorer#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://github.com/abolanceUOC/CityExplorer#> .
+
+<https://github.com/abolanceUOC/CityExplorer> rdf:type owl:Ontology ;
+                                               <http://purl.org/dc/terms/creator> "Abel Bolance Olivares"@en ,
+                                                                                  "Carles Asensi Seguer"@en ,
+                                                                                  "Sergi Tur Pinent"@en ;
+                                               <http://purl.org/dc/terms/description> "This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships."@en ;
+                                               <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en"@en ;
+                                               <http://purl.org/dc/terms/title> "CityExplorer Ontology"@en ;
+                                               rdfs:label "CityExplorer :ce"@en ;
+                                               owl:versionInfo "version 1.0.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#equivalentClass
+owl:equivalentClass rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> rdf:type owl:ObjectProperty ;
+                                                                                 owl:inverseOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf> ;
+                                                                                 rdf:type owl:FunctionalProperty ,
+                                                                                          owl:AsymmetricProperty ,
+                                                                                          owl:IrreflexiveProperty ;
+                                                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                           )
+                                                                                             ] ;
+                                                                                 rdfs:range <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                 rdfs:comment "Indicate if a class has a specific category"@en ;
+                                                                                 rdfs:label "hasCategory"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf> rdf:type owl:ObjectProperty ,
+                                                                                           owl:InverseFunctionalProperty ,
+                                                                                           owl:AsymmetricProperty ,
+                                                                                           owl:IrreflexiveProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                  rdfs:range [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                             <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                           )
+                                                                                             ] ;
+                                                                                  rdfs:comment "Indicates if a category is a category of a class"@en ;
+                                                                                  rdfs:label "isCategoryOf"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf> rdf:type owl:ObjectProperty ;
+                                                                              owl:inverseOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> ;
+                                                                              rdf:type owl:InverseFunctionalProperty ,
+                                                                                       owl:AsymmetricProperty ,
+                                                                                       owl:IrreflexiveProperty ;
+                                                                              rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> ;
+                                                                              rdfs:range [ rdf:type owl:Class ;
+                                                                                           owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                         <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                         <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                         <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                         <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                       )
+                                                                                         ] ;
+                                                                              rdfs:comment "Indicates if the city contains the specific property"@en ;
+                                                                              rdfs:label "isCityOf"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> rdf:type owl:ObjectProperty ,
+                                                                                            owl:FunctionalProperty ,
+                                                                                            owl:AsymmetricProperty ,
+                                                                                            owl:IrreflexiveProperty ;
+                                                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                                                 owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                             )
+                                                                                               ] ;
+                                                                                   rdfs:range <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> ;
+                                                                                   rdfs:comment "Indicates if it's located in a city"@en ;
+                                                                                   rdfs:label "locatedInCity"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                     rdfs:domain [ rdf:type owl:Class ;
+                                                                                                   owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                                 <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                               )
+                                                                                                 ] ;
+                                                                                     rdfs:range xsd:decimal ;
+                                                                                     rdfs:comment "The overall rating, based on a collection of reviews or ratings, of the item"@en ;
+                                                                                     rdfs:label "aggregateRating"@en ;
+                                                                                     rdfs:sameAs "https://schema.org/aggregateRating"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                                             rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport> ;
+                                                                             rdfs:range xsd:string ;
+                                                                             rdfs:comment "The company of transport"@en ;
+                                                                             rdfs:label "Company"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                rdfs:domain [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                          )
+                                                                                            ] ;
+                                                                                rdfs:range xsd:string ;
+                                                                                rdfs:comment "The identifier of the object (city, etc.)"@en ;
+                                                                                rdfs:label "Identifier"@en ;
+                                                                                rdfs:sameAs "https://schema.org/identifier"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                              rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> ;
+                                                                              rdfs:range xsd:string ;
+                                                                              rdfs:comment "The latitude of a location"@en ;
+                                                                              rdfs:label "Latitude"@en ;
+                                                                              rdfs:sameAs "https://schema.org/latitude"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                               rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> ;
+                                                                               rdfs:range xsd:string ;
+                                                                               rdfs:comment "The longitude of a location"@en ;
+                                                                               rdfs:label "Longitude"@en ;
+                                                                               rdfs:sameAs "https://schema.org/longitude"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                          rdfs:domain [ rdf:type owl:Class ;
+                                                                                        owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                    )
+                                                                                      ] ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:comment "The name of the item"@en ;
+                                                                          rdfs:label "Name"@en ;
+                                                                          rdfs:sameAs "https://schema.org/name"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                rdfs:domain [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                            <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                          )
+                                                                                            ] ;
+                                                                                rdfs:range xsd:integer ;
+                                                                                rdfs:comment "The price range of the business"@en ;
+                                                                                rdfs:label "priceRange"@en ;
+                                                                                rdfs:sameAs "https://schema.org/priceRange"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel> ;
+                                                                                rdfs:range xsd:integer ;
+                                                                                rdfs:comment "An official rating for a lodging business or food establishment"@en ;
+                                                                                rdfs:label "starRating"@en ;
+                                                                                rdfs:sameAs "https://schema.org/starRating"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                               rdfs:domain <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event> ;
+                                                                               rdfs:range xsd:dateTime ;
+                                                                               rdfs:comment "The start date and time of the item"@en ;
+                                                                               rdfs:label "startDate"@en ;
+                                                                               rdfs:sameAs "https://schema.org/startDate"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant> rdf:type owl:Class ;
+                                                                                          owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                                       owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                       owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian>
+                                                                                                                                     ]
+                                                                                                                                   ) ;
+                                                                                                                rdf:type owl:Class
+                                                                                                              ] ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory> ;
+                                                                                          rdfs:comment "Refers to restaurants serving food from Andalusia"@en ;
+                                                                                          rdfs:label "AndalusianRestaurant"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> ;
+                                                                                                  owl:someValuesFrom <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                  owl:onClass <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating> ;
+                                                                                                  owl:someValuesFrom xsd:decimal
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> ;
+                                                                                                  owl:someValuesFrom xsd:string
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name> ;
+                                                                                                  owl:someValuesFrom xsd:string
+                                                                                                ] ;
+                                                                                rdfs:comment "Refers to an attraction type, which can be cultural, park, etc."@en ;
+                                                                                rdfs:label "Attraction"@en ;
+                                                                                rdfs:sameAs "https://schema.org/Attraction"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category> ;
+                                                                                        rdfs:comment "Includes different attraction categories"@en ;
+                                                                                        rdfs:label "AttractionCategory"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes> rdf:type owl:Class ;
+                                                                                     owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                           owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park>
+                                                                                                                     )
+                                                                                                         ] ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                     rdfs:comment "Refers to the category of attractions"@en ;
+                                                                                     rdfs:label "AttractionType"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction> rdf:type owl:Class ;
+                                                                                     owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                  owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach>
+                                                                                                                                ]
+                                                                                                                              ) ;
+                                                                                                           rdf:type owl:Class
+                                                                                                         ] ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory> ;
+                                                                                     rdfs:comment "Refers to attractions involving a beach"@en ;
+                                                                                     rdfs:label "BeachAttraction"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation> ;
+                                                                                 rdfs:comment "Refers to cities located at the beach"@en ;
+                                                                                 rdfs:label "BeachCities"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel> rdf:type owl:Class ;
+                                                                                owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                             owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach>
+                                                                                                                           ]
+                                                                                                                         ) ;
+                                                                                                      rdf:type owl:Class
+                                                                                                    ] ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory> ;
+                                                                                rdfs:comment "Refers to hotels at the beach"@en ;
+                                                                                rdfs:label "BeachHotel"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport> rdf:type owl:Class ;
+                                                                                  owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                               owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                               owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus>
+                                                                                                                             ]
+                                                                                                                           ) ;
+                                                                                                        rdf:type owl:Class
+                                                                                                      ] ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory> ;
+                                                                                  rdfs:comment "Refers to bus transport"@en ;
+                                                                                  rdfs:label "BusTransport"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel> rdf:type owl:Class ;
+                                                                                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business>
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ] ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory> ;
+                                                                                   rdfs:comment "Refers to hotels considered for business"@en ;
+                                                                                   rdfs:label "BusinessHotel"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation> ;
+                                                                              rdfs:comment "Global category, including different categories"@en ;
+                                                                              rdfs:label "Category"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Refers to different types of categories"@en ;
+                                                                                   rdfs:label "CategoryTypes"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> ;
+                                                                                            owl:someValuesFrom xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude> ;
+                                                                                            owl:someValuesFrom xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude> ;
+                                                                                            owl:someValuesFrom xsd:string
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name> ;
+                                                                                            owl:someValuesFrom xsd:string
+                                                                                          ] ;
+                                                                          rdfs:comment "Refers to a city"@en ;
+                                                                          rdfs:label "City"@en ;
+                                                                          owl:equivalentClass "https://schema.org/City"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction> rdf:type owl:Class ;
+                                                                                        owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                     owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural>
+                                                                                                                                   ]
+                                                                                                                                 ) ;
+                                                                                                              rdf:type owl:Class
+                                                                                                            ] ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory> ;
+                                                                                        rdfs:comment "Refers to attractions involving any kind of cultural activity"@en ;
+                                                                                        rdfs:label "CulturalAttraction"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation> ;
+                                                                                    rdfs:comment "Refers to cities with cultural interest"@en ;
+                                                                                    rdfs:label "CulturalCities"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent> rdf:type owl:Class ;
+                                                                                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural>
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ] ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory> ;
+                                                                                   rdfs:comment "Refers to an event involving any kind of cultural activity"@en ;
+                                                                                   rdfs:label "CulturalEvent"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> ;
+                                                                                             owl:someValuesFrom <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                             owl:onClass <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> ;
+                                                                                             owl:someValuesFrom xsd:string
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name> ;
+                                                                                             owl:someValuesFrom xsd:string
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate> ;
+                                                                                             owl:someValuesFrom xsd:dateTime
+                                                                                           ] ;
+                                                                           rdfs:comment "Refers to an event"@en ;
+                                                                           rdfs:label "Event"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category> ;
+                                                                                   rdfs:comment "Includes different event categories"@en ;
+                                                                                   rdfs:label "EventCategory"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes> rdf:type owl:Class ;
+                                                                                owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                      owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological>
+                                                                                                                )
+                                                                                                    ] ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                rdfs:comment "Refers to the category of events"@en ;
+                                                                                rdfs:label "EventTypes"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent> rdf:type owl:Class ;
+                                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                   owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                   owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic>
+                                                                                                                                 ]
+                                                                                                                               ) ;
+                                                                                                            rdf:type owl:Class
+                                                                                                          ] ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory> ;
+                                                                                      rdfs:comment "Refers to an event involving gastronomy"@en ;
+                                                                                      rdfs:label "GastronomicEvent"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> ;
+                                                                                             owl:someValuesFrom <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                             owl:onClass <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating> ;
+                                                                                             owl:someValuesFrom xsd:decimal
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> ;
+                                                                                             owl:someValuesFrom xsd:string
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name> ;
+                                                                                             owl:someValuesFrom xsd:string
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange> ;
+                                                                                             owl:someValuesFrom xsd:integer
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating> ;
+                                                                                             owl:someValuesFrom xsd:integer
+                                                                                           ] ;
+                                                                           rdfs:comment "Refers to an hotel"@en ;
+                                                                           rdfs:label "Hotel"@en ;
+                                                                           rdfs:sameAs "https://schema.org/Hotel" .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category> ;
+                                                                                   rdfs:comment "Includes different hotel categories"@en ;
+                                                                                   rdfs:label "HotelCategory"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes> rdf:type owl:Class ;
+                                                                                owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                      owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural>
+                                                                                                                  <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist>
+                                                                                                                )
+                                                                                                    ] ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                rdfs:comment "Refers to the category of hotels"@en ;
+                                                                                rdfs:label "HotelTypes"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                    owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                    owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian>
+                                                                                                                                  ]
+                                                                                                                                ) ;
+                                                                                                             rdf:type owl:Class
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory> ;
+                                                                                       rdfs:comment "Refers to restaurants serving food from Italy"@en ;
+                                                                                       rdfs:label "ItalianRestaurant"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant> rdf:type owl:Class ;
+                                                                                        owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                     owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese>
+                                                                                                                                   ]
+                                                                                                                                 ) ;
+                                                                                                              rdf:type owl:Class
+                                                                                                            ] ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory> ;
+                                                                                        rdfs:comment "Refers to restaurants serving food from Japan"@en ;
+                                                                                        rdfs:label "JapaneseRestaurant"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel> rdf:type owl:Class ;
+                                                                                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                                              owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                              owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury>
+                                                                                                                            ]
+                                                                                                                          ) ;
+                                                                                                       rdf:type owl:Class
+                                                                                                     ] ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory> ;
+                                                                                 rdfs:comment "Refers to hotels considered luxurious"@en ;
+                                                                                 rdfs:label "LuxuryHotel"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant> rdf:type owl:Class ;
+                                                                                             owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                                          owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                          owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean>
+                                                                                                                                        ]
+                                                                                                                                      ) ;
+                                                                                                                   rdf:type owl:Class
+                                                                                                                 ] ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory> ;
+                                                                                             rdfs:comment "Refers to restaurants serving mediterranean food"@en ;
+                                                                                             rdfs:label "MediterraneanHotel"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport> rdf:type owl:Class ;
+                                                                                    owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                 owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro>
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ] ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory> ;
+                                                                                    rdfs:comment "Refers to metro transport"@en ;
+                                                                                    rdfs:label "MetroTransport"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant>
+                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                    owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                    owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican>
+                                                                                                                                  ]
+                                                                                                                                ) ;
+                                                                                                             rdf:type owl:Class
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory> ;
+                                                                                       rdfs:comment "Refers to restaurants serving food from Mexico"@en ;
+                                                                                       rdfs:label "MexicanRestaurant"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction> rdf:type owl:Class ;
+                                                                                        owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                     owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument>
+                                                                                                                                   ]
+                                                                                                                                 ) ;
+                                                                                                              rdf:type owl:Class
+                                                                                                            ] ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory> ;
+                                                                                        rdfs:comment "Refers to attractions involving a monument"@en ;
+                                                                                        rdfs:label "MonumentAttraction"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction> rdf:type owl:Class ;
+                                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                   owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                   owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum>
+                                                                                                                                 ]
+                                                                                                                               ) ;
+                                                                                                            rdf:type owl:Class
+                                                                                                          ] ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory> ;
+                                                                                      rdfs:comment "Refers to attractions involving a museum"@en ;
+                                                                                      rdfs:label "MuseumAttraction"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent> rdf:type owl:Class ;
+                                                                                owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                             owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music>
+                                                                                                                           ]
+                                                                                                                         ) ;
+                                                                                                      rdf:type owl:Class
+                                                                                                    ] ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory> ;
+                                                                                rdfs:comment "Refers to an event involving music"@en ;
+                                                                                rdfs:label "MusicEveent"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction> rdf:type owl:Class ;
+                                                                                    owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction>
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                 owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park>
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ] ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory> ;
+                                                                                    rdfs:comment "Refers to attractions involving a park"@en ;
+                                                                                    rdfs:label "ParkAttraction"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport> rdf:type owl:Class ;
+                                                                                         owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                                      owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                      owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike>
+                                                                                                                                    ]
+                                                                                                                                  ) ;
+                                                                                                               rdf:type owl:Class
+                                                                                                             ] ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory> ;
+                                                                                         rdfs:comment "Refers to public bike transport"@en ;
+                                                                                         rdfs:label "PublicBike"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation> rdf:type owl:Class ;
+                                                                                    rdfs:comment "Base class to make searches based on rules"@en ;
+                                                                                    rdfs:isDefinedBy "https://schema.org/Recommendation"@en ;
+                                                                                    rdfs:label "Recommendations"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation> ;
+                                                                                            rdfs:comment "Refers to restaurants that are recommended"@en ;
+                                                                                            rdfs:label "RecommendedRestaurants"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> ;
+                                                                                                  owl:someValuesFrom <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                  owl:onClass <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating> ;
+                                                                                                  owl:someValuesFrom xsd:decimal
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> ;
+                                                                                                  owl:someValuesFrom xsd:string
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name> ;
+                                                                                                  owl:someValuesFrom xsd:string
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange> ;
+                                                                                                  owl:someValuesFrom xsd:integer
+                                                                                                ] ;
+                                                                                rdfs:comment "Refers to a restaurant"@en ;
+                                                                                rdfs:label "Restaurant"@en ;
+                                                                                rdfs:sameAs "https://schema.org/Restaurant"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category> ;
+                                                                                        rdfs:comment "Includes different restaurant categories"@en ;
+                                                                                        rdfs:label "RestaurantCategory"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes> rdf:type owl:Class ;
+                                                                                     owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                           owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean>
+                                                                                                                       <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican>
+                                                                                                                     )
+                                                                                                         ] ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                     rdfs:comment "Refers to the category of restaurants"@en ;
+                                                                                     rdfs:label "RestaurantType"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel> rdf:type owl:Class ;
+                                                                                owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                             owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                             owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural>
+                                                                                                                           ]
+                                                                                                                         ) ;
+                                                                                                      rdf:type owl:Class
+                                                                                                    ] ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory> ;
+                                                                                rdfs:comment "Refers to hotels considered rural"@en ;
+                                                                                rdfs:label "RuralHotel"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent> rdf:type owl:Class ;
+                                                                                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                                              owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                              owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport>
+                                                                                                                            ]
+                                                                                                                          ) ;
+                                                                                                       rdf:type owl:Class
+                                                                                                     ] ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory> ;
+                                                                                 rdfs:comment "Refers to an event involving sports"@en ;
+                                                                                 rdfs:label "SportsEvent"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport> rdf:type owl:Class ;
+                                                                                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi>
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ] ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory> ;
+                                                                                   rdfs:comment "Refers to taxi transport"@en ;
+                                                                                   rdfs:label "TaxiTransport"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent> rdf:type owl:Class ;
+                                                                                        owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event>
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                     owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological>
+                                                                                                                                   ]
+                                                                                                                                 ) ;
+                                                                                                              rdf:type owl:Class
+                                                                                                            ] ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory> ;
+                                                                                        rdfs:comment "Refers to an event involving tecnology"@en ;
+                                                                                        rdfs:label "TechnologicalEvent"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel> rdf:type owl:Class ;
+                                                                                  owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel>
+                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                               owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                               owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist>
+                                                                                                                             ]
+                                                                                                                           ) ;
+                                                                                                        rdf:type owl:Class
+                                                                                                      ] ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory> ;
+                                                                                  rdfs:comment "Refers to touristic hotels"@en ;
+                                                                                  rdfs:label "TouristHotel"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport> rdf:type owl:Class ;
+                                                                                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                                                owl:hasValue <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram>
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ] ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory> ;
+                                                                                   rdfs:comment "Refers to tram transport"@en ;
+                                                                                   rdfs:label "TramTransport"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity> ;
+                                                                                                 owl:someValuesFrom <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory> ;
+                                                                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                 owl:onClass <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company> ;
+                                                                                                 owl:someValuesFrom xsd:string
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier> ;
+                                                                                                 owl:someValuesFrom xsd:string
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange> ;
+                                                                                                 owl:someValuesFrom xsd:integer
+                                                                                               ] ;
+                                                                               rdfs:comment "Refers to a way of transport"@en ;
+                                                                               rdfs:label "Transport"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category> ;
+                                                                                       rdfs:comment "Includes different attraction categories"@en ;
+                                                                                       rdfs:label "TransportCategory"@en .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes> rdf:type owl:Class ;
+                                                                                    owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                          owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus>
+                                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro>
+                                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike>
+                                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi>
+                                                                                                                      <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram>
+                                                                                                                    )
+                                                                                                        ] ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes> ;
+                                                                                    rdfs:comment "Refers to the category of transports"@en ;
+                                                                                    rdfs:label "TransportType"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram
+<http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram> rdf:type owl:NamedIndividual .
+
+
+[ rdfs:comment "An entity responsible for making the resource."@en
+] .
+
+_:genid209 rdfs:comment """An entity responsible for making the resource.
+http://purl.org/dc/terms/creator"""@en ;
+            rdfs:label "creator"@en .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Class ;
+   owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian>
+               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian>
+               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese>
+               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean>
+               <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican>
+             ) ;
+   rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes>
+ ] .
+
+
+[ rdf:type owl:Class ;
+  owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist>
+            ) ;
+  rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes>
+] .
+
+
+[ rdf:type owl:Class ;
+  owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park>
+            ) ;
+  rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes>
+] .
+
+
+[ rdf:type owl:Class ;
+  owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram>
+            ) ;
+  rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes>
+] .
+
+
+[ rdf:type owl:Class ;
+  owl:oneOf ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport>
+              <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological>
+            ) ;
+  rdfs:subClassOf <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes>
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent>
+                <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#ar> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#pr> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdfs:comment "rule for Cities with beach"@en ;
+   rdfs:label "BeachCities"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#a>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Rule for Cities with cultural attractions or events"@en ;
+   rdfs:label "CulturalCities"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#e>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#e>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#a>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Rule for recommended restaurants"@en ;
+   rdfs:label "RecommendedRestaurants"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#ar>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#pr>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <urn:swrl:var#ar> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 4.0 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#pr> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 20 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

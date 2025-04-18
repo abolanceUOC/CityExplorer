@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>CityExplorer Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://github.com/abolanceUOC/CityExplorer","image":"https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/abolanceUOC/CityExplorer/refs/heads/main/CityExplorer.rdf","name":"CityExplorer Ontology", "headline":"Document describing the ontology https://github.com/abolanceUOC/CityExplorer", "dateReleased":"Fri Apr 18 10:34:04 CEST 2025", "version":"version 1.0.0", "license":"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en", "author":[{"@type":"Person","name":"Abel Bolance Olivares"},{"@type":"Person","name":"Carles Asensi Seguer"},{"@type":"Person","name":"Sergi Tur Pinent"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>CityExplorer Ontology</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://github.com/abolanceUOC/CityExplorer">https://github.com/abolanceUOC/CityExplorer</a></dd>
+<dt>Revision:</dt>
+<dd>version 1.0.0</dd>
+<dt>Authors:</dt>
+<dd>Abel Bolance Olivares</dd><dd>Carles Asensi Seguer</dd><dd>Sergi Tur Pinent</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by_nc_nd/4.0/deed.en-blue.svg" alt="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" /></a>
+</dd><dt>Visualization:</dt><dd><a href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/abolanceUOC/CityExplorer/refs/heads/main/CityExplorer.rdf" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Abel Bolance Olivares, Carles Asensi Seguer, Sergi Tur Pinent. CityExplorer Ontology. Revision: version 1.0.0.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>CityExplorer</b></td><td>&lt;http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#&gt;</td></tr>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;https://github.com/abolanceUOC/CityExplorer/blob/main/CityExplorer.rdf#&gt;</td></tr>
+<tr><td><b>ce</b></td><td>&lt;https://github.com/abolanceUOC/CityExplorer/blob/main/CityExplorer.rff&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">CityExplorer :ce: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes">AttractionType</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities">BeachCities</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities">CulturalCities</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes">EventTypes</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes">HotelTypes</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">Recommendations</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants">RecommendedRestaurants</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes">RestaurantType</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes">TransportType</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">aggregateRating</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company">Company</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude">Latitude</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude">Longitude</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">priceRange</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating">starRating</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate"
+         title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate">startDate</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#equivalentClass" title="http://www.w3.org/2002/07/owl#equivalentClass">
+         <span>equivalent Class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e2324">BeachCities</a>
+   </li>
+   <li>
+      <a href="#d4e2441">CulturalCities</a>
+   </li>
+   <li>
+      <a href="#d4e2620">RecommendedRestaurants</a>
+   </li>
+</ul><iframe src="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/abolanceUOC/CityExplorer/refs/heads/main/CityExplorer.rdf"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">CityExplorer :ce: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CityExplorer :ce classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CityExplorer :ce.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes">AttractionType</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities">BeachCities</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities">CulturalCities</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes">EventTypes</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes">HotelTypes</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">Recommendations</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants">RecommendedRestaurants</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes">RestaurantType</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes">TransportType</a></li>
+ </ul>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">
+  <h3>AndalusianRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Refers to restaurants serving food from Andalusia</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian">Andalusian</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">
+  <h3>Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction</p>
+  <div class="comment">
+   <span class="markdown">Refers to an attraction type, which can be cultural, park, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">
+  <h3>AttractionCategory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory</p>
+  <div class="comment">
+   <span class="markdown">Includes different attraction categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes">
+  <h3>AttractionType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes</p>
+  <div class="comment">
+   <span class="markdown">Refers to the category of attractions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach">Beach</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural">Cultural</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument">Monument</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum">Museum</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park">Park</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">
+  <h3>BeachAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction</p>
+  <div class="comment">
+   <span class="markdown">Refers to attractions involving a beach</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach">Beach</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities">
+  <h3>BeachCities<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities</p>
+  <div class="comment">
+   <span class="markdown">Refers to cities located at the beach</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">Recommendations</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">
+  <h3>BeachHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel</p>
+  <div class="comment">
+   <span class="markdown">Refers to hotels at the beach</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach">Beach</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">
+  <h3>BusinessHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel</p>
+  <div class="comment">
+   <span class="markdown">Refers to hotels considered for business</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business">Business</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">
+  <h3>BusTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport</p>
+  <div class="comment">
+   <span class="markdown">Refers to bus transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus">Bus</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">
+  <h3>Category<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category</p>
+  <div class="comment">
+   <span class="markdown">Global category, including different categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">Recommendations</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">
+  <h3>CategoryTypes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes</p>
+  <div class="comment">
+   <span class="markdown">Refers to different types of categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes">AttractionType</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes">EventTypes</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes">HotelTypes</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes">RestaurantType</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes">TransportType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City</p>
+  <div class="comment">
+   <span class="markdown">Refers to a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    en
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude">Latitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude">Longitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">
+  <h3>CulturalAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction</p>
+  <div class="comment">
+   <span class="markdown">Refers to attractions involving any kind of cultural activity</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural">Cultural</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities">
+  <h3>CulturalCities<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities</p>
+  <div class="comment">
+   <span class="markdown">Refers to cities with cultural interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">Recommendations</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">
+  <h3>CulturalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">Refers to an event involving any kind of cultural activity</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural">Cultural</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event</p>
+  <div class="comment">
+   <span class="markdown">Refers to an event</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate">startDate</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">
+  <h3>EventCategory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory</p>
+  <div class="comment">
+   <span class="markdown">Includes different event categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes">
+  <h3>EventTypes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes</p>
+  <div class="comment">
+   <span class="markdown">Refers to the category of events</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural">Cultural</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic">Gastronomic</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music">Music</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport">Sport</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological">Technological</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">
+  <h3>GastronomicEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent</p>
+  <div class="comment">
+   <span class="markdown">Refers to an event involving gastronomy</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic">Gastronomic</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel</p>
+  <div class="comment">
+   <span class="markdown">Refers to an hotel</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">aggregateRating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">priceRange</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating">starRating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">
+  <h3>HotelCategory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory</p>
+  <div class="comment">
+   <span class="markdown">Includes different hotel categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes">
+  <h3>HotelTypes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes</p>
+  <div class="comment">
+   <span class="markdown">Refers to the category of hotels</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach">Beach</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business">Business</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury">Luxury</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural">Rural</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist">Tourist</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">
+  <h3>ItalianRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Refers to restaurants serving food from Italy</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian">Italianian</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">
+  <h3>JapaneseRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Refers to restaurants serving food from Japan</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese">Japanese</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">
+  <h3>LuxuryHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel</p>
+  <div class="comment">
+   <span class="markdown">Refers to hotels considered luxurious</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury">Luxury</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">
+  <h3>MediterraneanHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Refers to restaurants serving mediterranean food</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean">Mediterranean</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">
+  <h3>MetroTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport</p>
+  <div class="comment">
+   <span class="markdown">Refers to metro transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro">Metro</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">
+  <h3>MexicanRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Refers to restaurants serving food from Mexico</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican">Mexican</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">RestaurantCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">
+  <h3>MonumentAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction</p>
+  <div class="comment">
+   <span class="markdown">Refers to attractions involving a monument</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument">Monument</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">
+  <h3>MuseumAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction</p>
+  <div class="comment">
+   <span class="markdown">Refers to attractions involving a museum</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum">Museum</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">
+  <h3>MusicEveent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent</p>
+  <div class="comment">
+   <span class="markdown">Refers to an event involving music</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music">Music</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">
+  <h3>ParkAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction</p>
+  <div class="comment">
+   <span class="markdown">Refers to attractions involving a park</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park">Park</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">AttractionCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">
+  <h3>PublicBike<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport</p>
+  <div class="comment">
+   <span class="markdown">Refers to public bike transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike">Public Bike</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">
+  <h3>Recommendations<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation</p>
+  <div class="comment">
+   <span class="markdown">Base class to make searches based on rules</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://schema.org/Recommendation
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities">BeachCities</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities">CulturalCities</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants">RecommendedRestaurants</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants">
+  <h3>RecommendedRestaurants<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants</p>
+  <div class="comment">
+   <span class="markdown">Refers to restaurants that are recommended</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">Recommendations</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">Refers to a restaurant</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">aggregateRating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">priceRange</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">
+  <h3>RestaurantCategory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory</p>
+  <div class="comment">
+   <span class="markdown">Includes different restaurant categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">MediterraneanHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes">
+  <h3>RestaurantType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes</p>
+  <div class="comment">
+   <span class="markdown">Refers to the category of restaurants</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian">Andalusian</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian">Italianian</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese">Japanese</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean">Mediterranean</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican">Mexican</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">
+  <h3>RuralHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel</p>
+  <div class="comment">
+   <span class="markdown">Refers to hotels considered rural</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural">Rural</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">
+  <h3>SportsEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent</p>
+  <div class="comment">
+   <span class="markdown">Refers to an event involving sports</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport">Sport</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">
+  <h3>TaxiTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport</p>
+  <div class="comment">
+   <span class="markdown">Refers to taxi transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi">Taxi</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">
+  <h3>TechnologicalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent</p>
+  <div class="comment">
+   <span class="markdown">Refers to an event involving tecnology</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological">Technological</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">EventCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">MusicEveent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">SportsEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">
+  <h3>TouristHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel</p>
+  <div class="comment">
+   <span class="markdown">Refers to touristic hotels</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist">Tourist</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">HotelCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">
+  <h3>TramTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport</p>
+  <div class="comment">
+   <span class="markdown">Refers to tram transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup> <span class="logic">value</span> <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram">Tram</a> <sup class="type-ni" title="named individual">ni</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">TransportCategory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport</p>
+  <div class="comment">
+   <span class="markdown">Refers to a way of transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company">Company</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">priceRange</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">
+  <h3>TransportCategory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory</p>
+  <div class="comment">
+   <span class="markdown">Includes different attraction categories</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">PublicBike</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes">
+  <h3>TransportType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes</p>
+  <div class="comment">
+   <span class="markdown">Refers to the category of transports</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus">Bus</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro">Metro</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike">Public Bike</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi">Taxi</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram" target="_blank" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram">Tram</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a></li>
+ </ul>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">
+  <h3>hasCategory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory</p>
+  <div class="comment">
+   <span class="markdown">Indicate if a class has a specific category</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">isCategoryOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">
+  <h3>isCategoryOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf</p>
+  <div class="comment">
+   <span class="markdown">Indicates if a category is a category of a class</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> inverse functional, asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">CategoryTypes</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">hasCategory</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">
+  <h3>isCityOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf</p>
+  <div class="comment">
+   <span class="markdown">Indicates if the city contains the specific property</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> inverse functional, asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">locatedInCity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">
+  <h3>locatedInCity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity</p>
+  <div class="comment">
+   <span class="markdown">Indicates if it's located in a city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, asymmetric, irreflexive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">aggregateRating</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company">Company</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">Identifier</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude">Latitude</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude">Longitude</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">Name</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">priceRange</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating">starRating</a></li>
+  <li><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate">startDate</a></li>
+ </ul>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">
+  <h3>aggregateRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating</p>
+  <div class="comment">
+   <span class="markdown">The overall rating, based on a collection of reviews or ratings, of the item</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company">
+  <h3>Company<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company</p>
+  <div class="comment">
+   <span class="markdown">The company of transport</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">
+  <h3>Identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier</p>
+  <div class="comment">
+   <span class="markdown">The identifier of the object (city, etc.)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude">
+  <h3>Latitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude</p>
+  <div class="comment">
+   <span class="markdown">The latitude of a location</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude">
+  <h3>Longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude</p>
+  <div class="comment">
+   <span class="markdown">The longitude of a location</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">
+  <h3>Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name</p>
+  <div class="comment">
+   <span class="markdown">The name of the item</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">
+  <h3>priceRange<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange</p>
+  <div class="comment">
+   <span class="markdown">The price range of the business</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating">
+  <h3>starRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating</p>
+  <div class="comment">
+   <span class="markdown">An official rating for a lodging business or food establishment</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate">
+  <h3>startDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate</p>
+  <div class="comment">
+   <span class="markdown">The start date and time of the item</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#equivalentClass" title="http://www.w3.org/2002/07/owl#equivalentClass"> <span>equivalent Class</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#equivalentClass">
+  <h3>equivalent Class<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#equivalentClass</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e2324">BeachCities</a></li>
+  <li><a href="#d4e2441">CulturalCities</a></li>
+  <li><a href="#d4e2620">RecommendedRestaurants</a></li>
+ </ul>
+ <div class="entity" id="d4e2324">
+  <h3>BeachCities<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>rule for Cities with beach<br><br><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup>(?c) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>(?c,?a) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>(?a) -&gt; <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities">BeachCities</a> <sup class="type-c" title="class">c</sup>(?c)</p>
+ </div>
+ <div class="entity" id="d4e2441">
+  <h3>CulturalCities<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Rule for Cities with cultural attractions or events<br><br><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">City</a> <sup class="type-c" title="class">c</sup>(?c) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>(?c,?e) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">Event</a> <sup class="type-c" title="class">c</sup>(?e) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>(?e) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">isCityOf</a> <sup class="type-op" title="object property">op</sup>(?c,?a) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>(?a) -&gt; <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities">CulturalCities</a> <sup class="type-c" title="class">c</sup>(?c)</p>
+ </div>
+ <div class="entity" id="d4e2620">
+  <h3>RecommendedRestaurants<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Rule for recommended restaurants<br><br><a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?r) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">aggregateRating</a> <sup class="type-dp" title="data property">dp</sup>(?r,?ar) , <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">priceRange</a> <sup class="type-dp" title="data property">dp</sup>(?r,?pr) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" title="lessThanOrEqual">lessThanOrEqual</a>(?) -&gt; <a href="#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants" title="http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants">RecommendedRestaurants</a> <sup class="type-c" title="class">c</sup>(?r)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

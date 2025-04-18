@@ -1,0 +1,3112 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://github.com/abolanceUOC/CityExplorer/blob/main/CityExplorer.rff", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "CityExplorer Ontology"
+    },
+    "iri" : "https://github.com/abolanceUOC/CityExplorer/blob/main/CityExplorer.rff",
+    "version" : "version 1.0.0",
+    "author" : [ "Abel Bolance Olivares", "Sergi Tur Pinent", "Carles Asensi Seguer" ],
+    "description" : {
+      "en" : "This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships."
+    },
+    "labels" : {
+      "en" : "CityExplorer :ce"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Abel Bolance Olivares",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Carles Asensi Seguer",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Sergi Tur Pinent",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "version 1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "CityExplorer Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "14",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "44",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "34",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "48",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "107",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Datatype"
+  } ],
+  "classAttribute" : [ {
+    "instances" : 0,
+    "union" : [ "1", "2", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusinessHotel",
+      "en" : "BusinessHotel"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to hotels considered for business"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "18", "2", "3", "19" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "18", "2", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "21"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "18", "2", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "22"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "18", "2", "3", "19" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AttractionTypes",
+      "en" : "AttractionType"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Beach"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Park"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Cultural"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Monument"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Museum"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of attractions"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AttractionCategory",
+      "en" : "AttractionCategory"
+    },
+    "subClasses" : [ "33", "34", "35", "36", "37" ],
+    "comment" : {
+      "en" : "Includes different attraction categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParkAttraction",
+      "en" : "ParkAttraction"
+    },
+    "intersection" : [ "18" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a park"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "35",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MuseumAttraction",
+      "en" : "MuseumAttraction"
+    },
+    "intersection" : [ "18" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a museum"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "37",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LuxuryHotel",
+      "en" : "LuxuryHotel"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to hotels considered luxurious"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "41",
+    "superClasses" : [ "15" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "18", "2", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "42"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "18", "2", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MediterraneanRestaurant",
+      "en" : "MediterraneanHotel"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving mediterranean food"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RestaurantCategory",
+      "en" : "RestaurantCategory"
+    },
+    "subClasses" : [ "47", "48", "44", "49", "50" ],
+    "comment" : {
+      "en" : "Includes different restaurant categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaxiTransport",
+      "en" : "TaxiTransport"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to taxi transport"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "51",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TechnologicalEvent",
+      "en" : "TechnologicalEvent"
+    },
+    "intersection" : [ "17" ],
+    "comment" : {
+      "en" : "Refers to an event involving tecnology"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "54",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BeachAttraction",
+      "en" : "BeachAttraction"
+    },
+    "intersection" : [ "18" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a beach"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "34",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Category",
+      "en" : "Category"
+    },
+    "subClasses" : [ "52", "15", "55", "45", "32" ],
+    "comment" : {
+      "en" : "Global category, including different categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetroTransport",
+      "en" : "MetroTransport"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to metro transport"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "58",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://schema.org/Hotel",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hotel",
+      "en" : "Hotel"
+    },
+    "comment" : {
+      "en" : "Refers to an hotel"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AndalusianRestaurant",
+      "en" : "AndalusianRestaurant"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Andalusia"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "49",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransportTypes",
+      "en" : "TransportType"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Tram"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Bus"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "PublicBike"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Taxi"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Metro"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of transports"
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MexicanRestaurant",
+      "en" : "MexicanRestaurant"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Mexico"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "50",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RuralHotel",
+      "en" : "RuralHotel"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to hotels considered rural"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "66",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JapaneseRestaurant",
+      "en" : "JapaneseRestaurant"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Japan"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "48",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusTransport",
+      "en" : "BusTransport"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to bus transport"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "82",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "annotations" : {
+      "equivalentClass" : [ {
+        "identifier" : "equivalentClass",
+        "language" : "en",
+        "value" : "https://schema.org/City",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "City"
+    },
+    "comment" : {
+      "en" : "Refers to a city"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TouristHotel",
+      "en" : "TouristHotel"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to touristic hotels"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "73",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RestaurantTypes",
+      "en" : "RestaurantType"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Mexican"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Japanese"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Mediterranean"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Italianian"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Andalusian"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of restaurants"
+    },
+    "attributes" : [ "external" ],
+    "id" : "94",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotelCategory",
+      "en" : "HotelCategory"
+    },
+    "subClasses" : [ "66", "68", "14", "73", "41" ],
+    "comment" : {
+      "en" : "Includes different hotel categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transport",
+      "en" : "Transport"
+    },
+    "comment" : {
+      "en" : "Refers to a way of transport"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TramTransport",
+      "en" : "TramTransport"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to tram transport"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "117",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://schema.org/Recommendation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Recommendation",
+      "en" : "Recommendations"
+    },
+    "subClasses" : [ "10", "13", "113", "115" ],
+    "comment" : {
+      "en" : "Base class to make searches based on rules"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MonumentAttraction",
+      "en" : "MonumentAttraction"
+    },
+    "intersection" : [ "18" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a monument"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "33",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransportCategory",
+      "en" : "TransportCategory"
+    },
+    "subClasses" : [ "117", "58", "51", "82", "107" ],
+    "comment" : {
+      "en" : "Includes different attraction categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotelTypes",
+      "en" : "HotelTypes"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Beach"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Tourist"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Business"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Rural"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Luxury"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of hotels"
+    },
+    "attributes" : [ "external" ],
+    "id" : "101",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CategoryTypes",
+      "en" : "CategoryTypes"
+    },
+    "subClasses" : [ "101", "27", "62", "92", "94" ],
+    "comment" : {
+      "en" : "Refers to different types of categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "134",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "133",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "137",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "139",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "140",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BeachCities",
+      "en" : "BeachCities"
+    },
+    "comment" : {
+      "en" : "Refers to cities located at the beach"
+    },
+    "attributes" : [ "external" ],
+    "id" : "113",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecommendedRestaurants",
+      "en" : "RecommendedRestaurants"
+    },
+    "comment" : {
+      "en" : "Refers to restaurants that are recommended"
+    },
+    "attributes" : [ "external" ],
+    "id" : "115",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MusicEvent",
+      "en" : "MusicEveent"
+    },
+    "intersection" : [ "17" ],
+    "comment" : {
+      "en" : "Refers to an event involving music"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "87",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "comment" : {
+      "en" : "Refers to an event"
+    },
+    "attributes" : [ "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalCities",
+      "en" : "CulturalCities"
+    },
+    "comment" : {
+      "en" : "Refers to cities with cultural interest"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventCategory",
+      "en" : "EventCategory"
+    },
+    "subClasses" : [ "54", "87", "89", "75", "77" ],
+    "comment" : {
+      "en" : "Includes different event categories"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "163",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "162",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "167",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventTypes",
+      "en" : "EventTypes"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Gastronomic"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Music"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Cultural"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Technological"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport",
+      "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+      "labels" : {
+        "IRI-based" : "Sport"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of events"
+    },
+    "attributes" : [ "external" ],
+    "id" : "92",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SportsEvent",
+      "en" : "SportsEvent"
+    },
+    "intersection" : [ "17" ],
+    "comment" : {
+      "en" : "Refers to an event involving sports"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "75",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GastronomicEvent",
+      "en" : "GastronomicEvent"
+    },
+    "intersection" : [ "17" ],
+    "comment" : {
+      "en" : "Refers to an event involving gastronomy"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "77",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "170",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/Restaurant",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "en" : "Restaurant"
+    },
+    "comment" : {
+      "en" : "Refers to a restaurant"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BeachHotel",
+      "en" : "BeachHotel"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to hotels at the beach"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "68",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "181",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "186",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "187",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "190",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ItalianRestaurant",
+      "en" : "ItalianRestaurant"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Italy"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "47",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "202",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "204",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "208",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "207",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "211",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalAttraction",
+      "en" : "CulturalAttraction"
+    },
+    "intersection" : [ "18" ],
+    "comment" : {
+      "en" : "Refers to attractions involving any kind of cultural activity"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "36",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/Attraction",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Attraction",
+      "en" : "Attraction"
+    },
+    "comment" : {
+      "en" : "Refers to an attraction type, which can be cultural, park, etc."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalEvent",
+      "en" : "CulturalEvent"
+    },
+    "intersection" : [ "17" ],
+    "comment" : {
+      "en" : "Refers to an event involving any kind of cultural activity"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "89",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "214",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PublicBikeTransport",
+      "en" : "PublicBike"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to public bike transport"
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "107",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "216",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  } ],
+  "property" : [ {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "122",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "123",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "124",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "125",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "126",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "127",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "128",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "129",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "130",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "131",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "132",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "135",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "136",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "138",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "141",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "146",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "156",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "161",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "164",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "165",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "166",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "168",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "169",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "171",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "172",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "175",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "177",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "179",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "180",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "183",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "188",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "189",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "191",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "192",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "193",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "195",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "196",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "198",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "199",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "200",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "201",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "203",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "205",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "206",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "209",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "210",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "212",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "213",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "215",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "217",
+    "type" : "owl:someValuesFrom"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "11",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "company",
+      "en" : "Company"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The company of transport"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "company",
+      "en" : "Company"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The company of transport"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "6",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/startDate",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "startDate"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The start date and time of the item"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "24",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "56"
+  }, {
+    "range" : "15",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory",
+    "inverse" : "60",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasCategory",
+      "en" : "hasCategory"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "Indicate if a class has a specific category"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "4",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "61"
+  }, {
+    "range" : "10",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "10",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "15",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "15",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf",
+    "inverse" : "70",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "isCityOf",
+      "en" : "isCityOf"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Indicates if the city contains the specific property"
+    },
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "external", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "15",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "55",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "55",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "10",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "78"
+  }, {
+    "range" : "10",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "10",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "29",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "81"
+  }, {
+    "range" : "45",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "45",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "55",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "55",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "55",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "28",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "28",
+    "domain" : "92",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "28",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "45",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "45",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "range" : "32",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "32",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "28",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "range" : "52",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "103"
+  }, {
+    "range" : "52",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "range" : "52",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "52",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
+  }, {
+    "range" : "32",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "range" : "32",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "32",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "31",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/longitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "longitude",
+      "en" : "Longitude"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The longitude of a location"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "111"
+  }, {
+    "range" : "11",
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "range" : "11",
+    "domain" : "115",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "114"
+  }, {
+    "range" : "52",
+    "domain" : "117",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "73",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "66",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "41",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "range" : "35",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "37",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "14",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "35",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "33",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "range" : "35",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "126"
+  }, {
+    "range" : "35",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "127"
+  }, {
+    "range" : "37",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
+  }, {
+    "range" : "33",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "36",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "37",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "133",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "someValues", "object" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "137",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "134",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "140",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/latitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "latitude",
+      "en" : "Latitude"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The latitude of a location"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "143",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "142"
+  }, {
+    "range" : "117",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "139",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "145"
+  }, {
+    "range" : "117",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "51",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "117",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "51",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "107",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
+  }, {
+    "range" : "117",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "51",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "73",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "range" : "73",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "154"
+  }, {
+    "range" : "107",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "58",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "range" : "66",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "range" : "41",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "66",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "73",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "162",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/starRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "starRating",
+      "en" : "starRating"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "An official rating for a lodging business or food establishment"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "someValues", "object" ],
+    "id" : "164"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "163",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "165"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "20",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "166"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "167",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/startDate",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "startDate"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The start date and time of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "170",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "169"
+  }, {
+    "range" : "54",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "171"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "someValues", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "54",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "75",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "range" : "54",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "75",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "30",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/latitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "latitude",
+      "en" : "Latitude"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The latitude of a location"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "177"
+  }, {
+    "range" : "54",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "178"
+  }, {
+    "range" : "75",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "179"
+  }, {
+    "range" : "87",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "180"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "181",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/longitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "longitude",
+      "en" : "Longitude"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The longitude of a location"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "182"
+  }, {
+    "range" : "87",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "183"
+  }, {
+    "range" : "77",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "184"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "someValues", "object" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "187",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "188"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "190",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "189"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "186",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "191"
+  }, {
+    "range" : "44",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  }, {
+    "range" : "50",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "193"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "isCategoryOf",
+      "en" : "isCategoryOf"
+    },
+    "domain" : "28",
+    "comment" : {
+      "en" : "Indicates if a category is a category of a class"
+    },
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "external", "object" ],
+    "id" : "60"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "194"
+  }, {
+    "range" : "44",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
+  }, {
+    "range" : "50",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "196"
+  }, {
+    "range" : "44",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "197"
+  }, {
+    "range" : "50",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "198"
+  }, {
+    "range" : "50",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "199"
+  }, {
+    "range" : "47",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "200"
+  }, {
+    "range" : "48",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "201"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "202",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "203"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "204",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "205"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "207",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "206"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "external", "someValues", "object" ],
+    "id" : "209"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "208",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "210"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "211",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "212"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "5",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/starRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "starRating",
+      "en" : "starRating"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "An official rating for a lodging business or food establishment"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "213"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "214",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "215"
+  }, {
+    "iri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name",
+    "baseIri" : "http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer",
+    "range" : "216",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "external", "datatype", "someValues" ],
+    "id" : "217"
+  } ]
+}
