@@ -1,7 +1,9 @@
 # CityExplorer
 This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships.
 
-![Documentation](https://img.shields.io/badge/Documentation-View-blue)](https://[nombre-usuario].github.io/[nombre-repositorio]/Doc/index-en.html)
+## Documentation
+
+You can access the full documentation of the ontology [here](https://[nombre-usuario].github.io/[nombre-repositorio]/Doc/index-en.html).
 
 ## License
 
