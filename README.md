@@ -3,7 +3,7 @@ This ontology models personalized tourist experiences by representing cities, po
 
 ## Documentation
 
-You can access the full documentation of the ontology [here](https://[nombre-usuario].github.io/[nombre-repositorio]/Doc/index-en.html).
+You can access the full documentation of the ontology [here](https://github.com/abolanceUOC/CityExplorer/docs/index-en.html).
 
 ## License
 
