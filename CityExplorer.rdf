@@ -11,7 +11,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org#">
-    <owl:Ontology rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer">
+    <owl:Ontology rdf:about="https://github.com/abolanceUOC/CityExplorer">
         <terms:creator xml:lang="en">Abel Bolance Olivares</terms:creator>
         <terms:creator xml:lang="en">Carles Asensi Seguer</terms:creator>
         <terms:creator xml:lang="en">Sergi Tur Pinent</terms:creator>
@@ -82,9 +82,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#hasCategory -->
 
-    <owl:ObjectProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#hasCategory">
+    <owl:ObjectProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#hasCategory">
         <owl:inverseOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#isCategoryOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -92,11 +92,11 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -107,9 +107,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#isCategoryOf -->
 
-    <owl:ObjectProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCategoryOf">
+    <owl:ObjectProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#isCategoryOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
@@ -117,11 +117,11 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -131,9 +131,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#isCityOf -->
 
-    <owl:ObjectProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#isCityOf">
+    <owl:ObjectProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#isCityOf">
         <owl:inverseOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#locatedInCity"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -142,11 +142,11 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -156,20 +156,20 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#locatedInCity -->
 
-    <owl:ObjectProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#locatedInCity">
+    <owl:ObjectProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#locatedInCity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -191,15 +191,15 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#aggregateRating -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#aggregateRating">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#aggregateRating">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -211,9 +211,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#company -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#company">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#company">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://github.com/abolanceUOC/CityExplorer#Transport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -223,19 +223,19 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#identifier -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#identifier">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#identifier">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#City"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -247,9 +247,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#latitude -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#latitude">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#latitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://github.com/abolanceUOC/CityExplorer#City"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -260,9 +260,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#longitude -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#longitude">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#longitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://github.com/abolanceUOC/CityExplorer#City"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -273,19 +273,19 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#name -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#name">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#City"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -297,16 +297,16 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#priceRange -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#priceRange">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#priceRange">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -318,9 +318,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#starRating -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#starRating">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#starRating">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -331,9 +331,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#startDate -->
 
-    <owl:DatatypeProperty rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#startDate">
+    <owl:DatatypeProperty rdf:about="https://github.com/abolanceUOC/CityExplorer#startDate">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://github.com/abolanceUOC/CityExplorer#Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -355,13 +355,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#AndalusianRestaurant -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#AndalusianRestaurant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Andalusian"/>
@@ -376,9 +376,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Attraction -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#locatedInCity"/>
@@ -417,9 +417,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#AttractionCategory -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionCategory">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#AttractionCategory">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different attraction categories</rdfs:comment>
         <rdfs:label xml:lang="en">AttractionCategory</rdfs:label>
@@ -427,17 +427,17 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#AttractionTypes -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AttractionTypes">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#AttractionTypes">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Beach"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Monument"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Museum"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Park"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -448,13 +448,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#BeachAttraction -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#BeachAttraction">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Beach"/>
@@ -469,9 +469,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#BeachCities -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachCities">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#BeachCities">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Refers to cities located at the beach</rdfs:comment>
         <rdfs:label xml:lang="en">BeachCities</rdfs:label>
@@ -479,13 +479,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#BeachHotel -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#BeachHotel">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Beach"/>
@@ -500,13 +500,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#BusTransport -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#BusTransport">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Bus"/>
@@ -521,13 +521,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#BusinessHotel -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#BusinessHotel">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Business"/>
@@ -542,9 +542,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Category -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Category">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Category">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Global category, including different categories</rdfs:comment>
         <rdfs:label xml:lang="en">Category</rdfs:label>
@@ -552,18 +552,18 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#CategoryTypes -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CategoryTypes">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#CategoryTypes">
         <rdfs:comment xml:lang="en">Refers to different types of categories</rdfs:comment>
         <rdfs:label xml:lang="en">CategoryTypes</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#City -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#City">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#identifier"/>
@@ -589,20 +589,19 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Refers to a city</rdfs:comment>
-		<rdfs:isDefinedBy xml:lang="en">https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">City</rdfs:label>
+		<rdfs:label xml:lang="en">City</rdfs:label>
         <owl:equivalentClass xml:lang="en">https://schema.org/City</owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#CulturalAttraction -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#CulturalAttraction">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
@@ -617,9 +616,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#CulturalCities -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalCities">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#CulturalCities">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Refers to cities with cultural interest</rdfs:comment>
         <rdfs:label xml:lang="en">CulturalCities</rdfs:label>
@@ -627,13 +626,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#CulturalEvent -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#CulturalEvent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
@@ -648,9 +647,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Event -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Event">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#locatedInCity"/>
@@ -688,9 +687,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#EventCategory -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventCategory">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#EventCategory">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different event categories</rdfs:comment>
         <rdfs:label xml:lang="en">EventCategory</rdfs:label>
@@ -698,17 +697,17 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#EventTypes -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#EventTypes">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#EventTypes">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Gastronomic"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Music"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Sport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Technological"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -719,13 +718,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#GastronomicEvent -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#GastronomicEvent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Gastronomic"/>
@@ -740,9 +739,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Hotel -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#locatedInCity"/>
@@ -793,9 +792,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#HotelCategory -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelCategory">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#HotelCategory">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different hotel categories</rdfs:comment>
         <rdfs:label xml:lang="en">HotelCategory</rdfs:label>
@@ -803,17 +802,17 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#HotelTypes -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#HotelTypes">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#HotelTypes">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Beach"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Business"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Luxury"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Rural"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Tourist"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -824,13 +823,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#ItalianRestaurant -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#ItalianRestaurant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Italianian"/>
@@ -845,13 +844,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#JapaneseRestaurant -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#JapaneseRestaurant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Japanese"/>
@@ -866,13 +865,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#LuxuryHotel -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#LuxuryHotel">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Luxury"/>
@@ -887,13 +886,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#MediterraneanRestaurant -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#MediterraneanRestaurant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Mediterranean"/>
@@ -908,13 +907,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#MetroTransport -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#MetroTransport">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Metro"/>
@@ -929,13 +928,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#MexicanRestaurant -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#MexicanRestaurant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Mexican"/>
@@ -950,13 +949,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#MonumentAttraction -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#MonumentAttraction">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Monument"/>
@@ -971,13 +970,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#MuseumAttraction -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#MuseumAttraction">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Museum"/>
@@ -992,13 +991,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#MusicEvent -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#MusicEvent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Music"/>
@@ -1013,13 +1012,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#ParkAttraction -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#ParkAttraction">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Attraction"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Attraction"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Park"/>
@@ -1034,13 +1033,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#PublicBikeTransport -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#PublicBikeTransport">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#PublicBike"/>
@@ -1055,9 +1054,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Recommendation -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Recommendation">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Recommendation">
         <rdfs:comment xml:lang="en">Base class to make searches based on rules</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://schema.org/Recommendation</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Recommendations</rdfs:label>
@@ -1065,9 +1064,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#RecommendedRestaurants -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RecommendedRestaurants">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#RecommendedRestaurants">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Refers to restaurants that are recommended</rdfs:comment>
         <rdfs:label xml:lang="en">RecommendedRestaurants</rdfs:label>
@@ -1075,9 +1074,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Restaurant -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Restaurant">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Restaurant">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#locatedInCity"/>
@@ -1122,9 +1121,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#RestaurantCategory -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantCategory">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#RestaurantCategory">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different restaurant categories</rdfs:comment>
         <rdfs:label xml:lang="en">RestaurantCategory</rdfs:label>
@@ -1132,17 +1131,17 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#RestaurantTypes -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RestaurantTypes">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#RestaurantTypes">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Andalusian"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Italianian"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Japanese"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Mediterranean"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Mexican"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1153,13 +1152,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#RuralHotel -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#RuralHotel">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Rural"/>
@@ -1174,13 +1173,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#SportsEvent -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#SportsEvent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Sport"/>
@@ -1195,13 +1194,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#TaxiTransport -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#TaxiTransport">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Taxi"/>
@@ -1216,13 +1215,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#TechnologicalEvent -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#TechnologicalEvent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Event"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Event"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Technological"/>
@@ -1237,13 +1236,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#TouristHotel -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#TouristHotel">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Hotel"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Hotel"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Tourist"/>
@@ -1258,13 +1257,13 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#TramTransport -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#TramTransport">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#hasCategory"/>
                         <owl:hasValue rdf:resource="https://github.com/abolanceUOC/CityExplorer#Tram"/>
@@ -1279,9 +1278,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Transport -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Transport">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#Transport">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/abolanceUOC/CityExplorer#locatedInCity"/>
@@ -1319,9 +1318,9 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#TransportCategory -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportCategory">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#TransportCategory">
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different attraction categories</rdfs:comment>
         <rdfs:label xml:lang="en">TransportCategory</rdfs:label>
@@ -1329,17 +1328,17 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#TransportTypes -->
 
-    <owl:Class rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TransportTypes">
+    <owl:Class rdf:about="https://github.com/abolanceUOC/CityExplorer#TransportTypes">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi"/>
-                    <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Bus"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Metro"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#PublicBike"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Taxi"/>
+                    <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Tram"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1361,141 +1360,141 @@
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Andalusian -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Andalusian"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Beach -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Beach"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Bus -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Bus"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Business -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Business"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Cultural -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Gastronomic -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Gastronomic"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Italianian -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Italianian"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Japanese -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Japanese"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Luxury -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Luxury"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Mediterranean -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Mediterranean"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Metro -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Metro"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Mexican -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Mexican"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Monument -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Monument"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Museum -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Museum"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Music -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Music"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Park -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Park"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#PublicBike -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#PublicBike"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Rural -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Rural"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Sport -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Sport"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Taxi -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Taxi"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Technological -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Technological"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Tourist -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Tourist"/>
     
 
 
-    <!-- https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram -->
+    <!-- https://github.com/abolanceUOC/CityExplorer#Tram -->
 
-    <owl:NamedIndividual rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram"/>
+    <owl:NamedIndividual rdf:about="https://github.com/abolanceUOC/CityExplorer#Tram"/>
     <rdf:Description>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
     </rdf:Description>
@@ -1517,102 +1516,102 @@ http://purl.org/dc/terms/creator</rdfs:comment>
 
     <owl:Class>
         <owl:oneOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Andalusian"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Italianian"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Japanese"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mediterranean"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Mexican"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Andalusian"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Italianian"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Japanese"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Mediterranean"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Mexican"/>
         </owl:oneOf>
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#RestaurantTypes"/>
     </owl:Class>
     <owl:Class>
         <owl:oneOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Business"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Luxury"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Rural"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tourist"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Beach"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Business"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Luxury"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Rural"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Tourist"/>
         </owl:oneOf>
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#HotelTypes"/>
     </owl:Class>
     <owl:Class>
         <owl:oneOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Beach"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Monument"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Museum"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Park"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Beach"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Monument"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Museum"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Park"/>
         </owl:oneOf>
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#AttractionTypes"/>
     </owl:Class>
     <owl:Class>
         <owl:oneOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Bus"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Metro"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBike"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Taxi"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Tram"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Bus"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Metro"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#PublicBike"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Taxi"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Tram"/>
         </owl:oneOf>
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#TransportTypes"/>
     </owl:Class>
     <owl:Class>
         <owl:oneOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Cultural"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Gastronomic"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Music"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Sport"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#Technological"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Cultural"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Gastronomic"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Music"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Sport"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#Technological"/>
         </owl:oneOf>
         <rdfs:subClassOf rdf:resource="https://github.com/abolanceUOC/CityExplorer#EventTypes"/>
     </owl:Class>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#AndalusianRestaurant"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ItalianRestaurant"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#JapaneseRestaurant"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MediterraneanRestaurant"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MexicanRestaurant"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#AndalusianRestaurant"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#ItalianRestaurant"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#JapaneseRestaurant"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#MediterraneanRestaurant"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#MexicanRestaurant"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachAttraction"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalAttraction"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MonumentAttraction"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MuseumAttraction"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#ParkAttraction"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#BeachAttraction"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#CulturalAttraction"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#MonumentAttraction"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#MuseumAttraction"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#ParkAttraction"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BeachHotel"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusinessHotel"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#LuxuryHotel"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#RuralHotel"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TouristHotel"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#BeachHotel"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#BusinessHotel"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#LuxuryHotel"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#RuralHotel"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#TouristHotel"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#BusTransport"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MetroTransport"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#PublicBikeTransport"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TaxiTransport"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TramTransport"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#BusTransport"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#MetroTransport"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#PublicBikeTransport"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#TaxiTransport"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#TramTransport"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#CulturalEvent"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#GastronomicEvent"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#MusicEvent"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#SportsEvent"/>
-            <rdf:Description rdf:about="https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#TechnologicalEvent"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#CulturalEvent"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#GastronomicEvent"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#MusicEvent"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#SportsEvent"/>
+            <rdf:Description rdf:about="https://github.com/abolanceUOC/CityExplorer#TechnologicalEvent"/>
         </owl:members>
     </rdf:Description>
     
