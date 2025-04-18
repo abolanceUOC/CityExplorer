@@ -589,6 +589,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Refers to a city</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">https://abolanceuoc.github.io/CityExplorer/docs/index.html#http://www.semanticweb.org/abolance/ontologies/2025/3/CityExplorer#City</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">City</rdfs:label>
         <owl:equivalentClass xml:lang="en">https://schema.org/City</owl:equivalentClass>
     </owl:Class>
