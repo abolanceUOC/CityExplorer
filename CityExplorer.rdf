@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org#"
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
-    <owl:Ontology rdf:about="https://github.com/abolanceUOC/CityExplorer">
+    <owl:Ontology rdf:about="https://purl.org/cityexplorer">
         <terms:creator xml:lang="en">Carles Asensi Seguer
 Sergi Tur Pinent
 Abel Bolance Olivares</terms:creator>
