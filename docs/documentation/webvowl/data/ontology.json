@@ -1,0 +1,6584 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://purl.org/cityexplorer" ],
+    "title" : {
+      "en" : "CityExplorer Ontology"
+    },
+    "iri" : "https://purl.org/cityexplorer#",
+    "version" : "version 1.0",
+    "author" : [ "Carles Asensi Seguer\nSergi Tur Pinent\nAbel Bolance Olivares" ],
+    "description" : {
+      "en" : "This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships. This ontology is part of a university project."
+    },
+    "labels" : {
+      "en" : "CityExplorer :ce"
+    },
+    "other" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "en",
+        "value" : "https://purl.org/cityexplorer",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Carles Asensi Seguer\nSergi Tur Pinent\nAbel Bolance Olivares",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-15",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "https://purl.org/cityexplorer/data",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "version 1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "CityExplorer Ontology",
+        "type" : "label"
+      } ],
+      "backwardCompatibility" : [ {
+        "identifier" : "backwardCompatibility",
+        "language" : "en",
+        "value" : "Backward compatible",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+        "type" : "label"
+      } ],
+      "previousVersion" : [ {
+        "identifier" : "previousVersion",
+        "language" : "en",
+        "value" : "https://purl.org/cityexplorer/1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "ce",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "en",
+        "value" : "REPRESENTACIÓ DEL CONEIXEMENT - PAC2",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "en",
+        "value" : "2025-04-21",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "https://service.tib.eu/webvowl/\nhttps://oops.linkeddata.es/\nhttps://dgarijo.github.io/Widoco/doc/tutorial/\nhttps://github.com/protegeproject/swrlapi/wiki\nhttps://www.w3.org/RDF/Validator/\nhttps://schema.org/docs/schemas.html\n",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "en",
+        "value" : "https://purl.org/cityexplorer#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "en",
+        "value" : "2025-05-21",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "100",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "65",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "72",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "209",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Datatype"
+  } ],
+  "classAttribute" : [ {
+    "instances" : 0,
+    "union" : [ "1", "2", "3" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#BeachHotel",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BeachHotel",
+      "en" : "BeachHotel"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to hotels at the beach"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#EventTypes",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventTypes",
+      "en" : "EventTypes"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#Sport",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Sport"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Gastronomic",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Gastronomic"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Music",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Music"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Cultural",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Cultural"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Technological",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Technological"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of events"
+    },
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "23", "2", "17", "3", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "23", "2", "3", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "18"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "23", "2", "3", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#BusTransport",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BusTransport",
+      "en" : "BusTransport"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to bus transport"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "27",
+    "superClasses" : [ "15" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "3" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#TouristHotel",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TouristHotel",
+      "en" : "TouristHotel"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to touristic hotels"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "29",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "23", "2", "17", "3", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#City",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ],
+      "equivalentClass" : [ {
+        "identifier" : "equivalentClass",
+        "language" : "en",
+        "value" : "https://schema.org/City",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "City"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#Madrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Madrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Pamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Pamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Cadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Cadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Bilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Bilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#València",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "València"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Saragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Saragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Sevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Sevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Barcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Barcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#SantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "SantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Toledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Toledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Màlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Màlaga"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to a city"
+    },
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "23", "2", "3", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "38"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "23", "2", "3", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#HotelCategory",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HotelCategory",
+      "en" : "HotelCategory"
+    },
+    "subClasses" : [ "5", "29", "43", "44", "45" ],
+    "comment" : {
+      "en" : "Includes different hotel categories"
+    },
+    "id" : "6",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#ItalianRestaurant",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ItalianRestaurant",
+      "en" : "ItalianRestaurant"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Italy"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "46",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#CulturalAttraction",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CulturalAttraction",
+      "en" : "CulturalAttraction"
+    },
+    "intersection" : [ "23" ],
+    "comment" : {
+      "en" : "Refers to attractions involving any kind of cultural activity"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "47",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#SportsEvent",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SportsEvent",
+      "en" : "SportsEvent"
+    },
+    "intersection" : [ "24" ],
+    "comment" : {
+      "en" : "Refers to an event involving sports"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "49",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Hotel",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://schema.org/Hotel",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hotel",
+      "en" : "Hotel"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#58_HotelDelMarSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "58_HotelDelMarSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#24_HotelRoyalSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "24_HotelRoyalSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#18_HotelPalaceMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "18_HotelPalaceMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#43_HotelRoyalPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "43_HotelRoyalPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#14_HotelPalaceMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "14_HotelPalaceMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#29_HotelRoyalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "29_HotelRoyalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#98_HotelPalaceMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "98_HotelPalaceMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#99_HotelSolSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "99_HotelSolSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#8_HotelVistaCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "8_HotelVistaCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#28_HotelDelMarSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "28_HotelDelMarSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#16_HotelPalaceSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "16_HotelPalaceSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#79_HotelSolMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "79_HotelSolMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#45_HotelRoyalBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "45_HotelRoyalBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#86_HotelVistaToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "86_HotelVistaToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#66_HotelSolMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "66_HotelSolMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#65_HotelPalaceToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "65_HotelPalaceToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#97_HotelPalaceMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "97_HotelPalaceMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#85_HotelPalaceMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "85_HotelPalaceMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#26_HotelSolCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "26_HotelSolCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#60_HotelDelMarBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "60_HotelDelMarBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#46_HotelVistaSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "46_HotelVistaSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#93_HotelDelMarMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "93_HotelDelMarMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#96_HotelVistaPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "96_HotelVistaPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#20_HotelVistaValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "20_HotelVistaValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#25_HotelRoyalSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "25_HotelRoyalSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#31_HotelVistaMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "31_HotelVistaMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#89_HotelVistaBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "89_HotelVistaBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#94_HotelVistaBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "94_HotelVistaBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#21_HotelSolValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "21_HotelSolValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#59_HotelVistaSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "59_HotelVistaSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#77_HotelSolBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "77_HotelSolBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#11_HotelRoyalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "11_HotelRoyalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#36_HotelPalaceSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "36_HotelPalaceSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#71_HotelDelMarMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "71_HotelDelMarMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#12_HotelRoyalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "12_HotelRoyalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#95_HotelPalacePamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "95_HotelPalacePamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#68_HotelDelMarMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "68_HotelDelMarMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#23_HotelVistaToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "23_HotelVistaToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#63_HotelSolBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "63_HotelSolBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#82_HotelPalaceBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "82_HotelPalaceBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#10_HotelRoyalCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "10_HotelRoyalCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#22_HotelVistaMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "22_HotelVistaMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#6_HotelRoyalSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "6_HotelRoyalSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#87_HotelSolSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "87_HotelSolSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#13_HotelDelMarSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "13_HotelDelMarSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#49_HotelVistaPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "49_HotelVistaPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#32_HotelPalaceToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "32_HotelPalaceToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#61_HotelDelMarCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "61_HotelDelMarCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#17_HotelDelMarToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "17_HotelDelMarToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#76_HotelVistaBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "76_HotelVistaBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#69_HotelRoyalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "69_HotelRoyalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#52_HotelSolSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "52_HotelSolSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#100_HotelPalaceMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "100_HotelPalaceMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#81_HotelVistaBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "81_HotelVistaBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#57_HotelSolSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "57_HotelSolSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#55_HotelVistaCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "55_HotelVistaCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#53_HotelDelMarMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "53_HotelDelMarMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#74_HotelPalacePamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "74_HotelPalacePamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#75_HotelRoyalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "75_HotelRoyalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#67_HotelVistaMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "67_HotelVistaMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#80_HotelVistaSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "80_HotelVistaSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#1_HotelVistaSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "1_HotelVistaSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#72_HotelDelMarSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "72_HotelDelMarSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#84_HotelVistaMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "84_HotelVistaMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#83_HotelPalaceCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "83_HotelPalaceCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#56_HotelDelMarCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "56_HotelDelMarCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#2_HotelRoyalPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "2_HotelRoyalPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#30_HotelDelMarPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "30_HotelDelMarPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#70_HotelRoyalSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "70_HotelRoyalSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#42_HotelPalaceMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "42_HotelPalaceMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#37_HotelDelMarValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "37_HotelDelMarValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#3_HotelRoyalMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "3_HotelRoyalMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#9_HotelRoyalBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "9_HotelRoyalBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#92_HotelRoyalMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "92_HotelRoyalMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#4_HotelRoyalBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "4_HotelRoyalBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#44_HotelVistaSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "44_HotelVistaSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#90_HotelDelMarSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "90_HotelDelMarSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#73_HotelVistaSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "73_HotelVistaSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#54_HotelPalaceToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "54_HotelPalaceToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#47_HotelDelMarSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "47_HotelDelMarSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#33_HotelSolBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "33_HotelSolBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#34_HotelDelMarBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "34_HotelDelMarBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#51_HotelPalacePamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "51_HotelPalacePamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#35_HotelDelMarPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "35_HotelDelMarPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#41_HotelRoyalCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "41_HotelRoyalCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#64_HotelPalaceBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "64_HotelPalaceBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#62_HotelPalaceBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "62_HotelPalaceBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#19_HotelSolBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "19_HotelSolBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#40_HotelDelMarSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "40_HotelDelMarSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#38_HotelDelMarMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "38_HotelDelMarMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#48_HotelPalaceMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "48_HotelPalaceMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#91_HotelDelMarValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "91_HotelDelMarValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#88_HotelVistaBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "88_HotelVistaBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#50_HotelSolCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "50_HotelSolCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#78_HotelRoyalBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "78_HotelRoyalBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#7_HotelRoyalValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "7_HotelRoyalValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#5_HotelPalaceSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "5_HotelPalaceSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#39_HotelSolSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "39_HotelSolSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#15_HotelPalaceCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "15_HotelPalaceCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#27_HotelSolBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "27_HotelSolBilbao"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to an hotel"
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Recommendation",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://schema.org/Recommendation",
+        "type" : "label"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Recommendation",
+      "en" : "Recommendations"
+    },
+    "subClasses" : [ "13", "52", "53", "54" ],
+    "comment" : {
+      "en" : "Base class to make searches based on rules"
+    },
+    "id" : "51"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#PublicBikeTransport",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PublicBikeTransport",
+      "en" : "PublicBike"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to public bike transport"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "55",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#CategoryTypes",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CategoryTypes",
+      "en" : "CategoryTypes"
+    },
+    "subClasses" : [ "58", "59", "20", "60", "61" ],
+    "comment" : {
+      "en" : "Refers to different types of categories"
+    },
+    "id" : "21"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#TramTransport",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TramTransport",
+      "en" : "TramTransport"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to tram transport"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "64",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#AttractionCategory",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AttractionCategory",
+      "en" : "AttractionCategory"
+    },
+    "subClasses" : [ "65", "66", "67", "68", "47" ],
+    "comment" : {
+      "en" : "Includes different attraction categories"
+    },
+    "id" : "48",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Transport",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Transport",
+      "en" : "Transport"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#8_CityMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "8_CityMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#44_MoviSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "44_MoviSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#98_CityPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "98_CityPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#39_MoviSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "39_MoviSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#1_UrbanMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "1_UrbanMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#75_MetroPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "75_MetroPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#42_UrbanSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "42_UrbanSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#13_CityCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "13_CityCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#83_CityToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "83_CityToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#50_UrbanSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "50_UrbanSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#41_MetroBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "41_MetroBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#55_MoviToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "55_MoviToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#95_TransMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "95_TransMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#94_MoviMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "94_MoviMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#7_MetroCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "7_MetroCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#34_UrbanSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "34_UrbanSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#31_UrbanSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "31_UrbanSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#69_MetroPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "69_MetroPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#32_MetroMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "32_MetroMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#10_TransSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "10_TransSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#33_MetroMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "33_MetroMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#99_MetroSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "99_MetroSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#47_MoviSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "47_MoviSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#92_MetroMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "92_MetroMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#28_UrbanPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "28_UrbanPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#97_TransCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "97_TransCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#11_TransValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "11_TransValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#25_MetroSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "25_MetroSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#62_CityCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "62_CityCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#24_UrbanValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "24_UrbanValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#93_TransValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "93_TransValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#96_TransSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "96_TransSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#14_MoviPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "14_MoviPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#9_MetroBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "9_MetroBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#53_UrbanToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "53_UrbanToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#88_TransSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "88_TransSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#66_MetroSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "66_MetroSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#30_UrbanMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "30_UrbanMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#90_CitySaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "90_CitySaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#18_MetroBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "18_MetroBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#3_TransToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "3_TransToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#4_CitySaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "4_CitySaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#21_CityPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "21_CityPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#64_CityBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "64_CityBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#49_CityMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "49_CityMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#23_MoviPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "23_MoviPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#78_MoviBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "78_MoviBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#46_MetroPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "46_MetroPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#79_TransSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "79_TransSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#45_MetroPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "45_MetroPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#74_UrbanSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "74_UrbanSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#22_UrbanSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "22_UrbanSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#73_TransCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "73_TransCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#15_MoviCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "15_MoviCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#5_MoviCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "5_MoviCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#91_UrbanBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "91_UrbanBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#72_UrbanSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "72_UrbanSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#89_UrbanValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "89_UrbanValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#51_UrbanMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "51_UrbanMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#19_CityBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "19_CityBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#17_UrbanBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "17_UrbanBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#35_MetroBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "35_MetroBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#2_TransBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "2_TransBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#68_TransMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "68_TransMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#71_MoviBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "71_MoviBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#38_MoviMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "38_MoviMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#52_TransMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "52_TransMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#43_CityPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "43_CityPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#60_UrbanMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "60_UrbanMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#86_CitySevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "86_CitySevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#40_UrbanToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "40_UrbanToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#59_MetroSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "59_MetroSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#85_MoviSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "85_MoviSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#77_MetroMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "77_MetroMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#26_MetroPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "26_MetroPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#76_CityMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "76_CityMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#48_MoviToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "48_MoviToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#56_TransValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "56_TransValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#70_UrbanBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "70_UrbanBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#37_TransMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "37_TransMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#57_MoviValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "57_MoviValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#58_MoviPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "58_MoviPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#6_TransPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "6_TransPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#36_CityBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "36_CityBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#67_MetroToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "67_MetroToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#29_MetroSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "29_MetroSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#54_MetroMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "54_MetroMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#20_MoviBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "20_MoviBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#81_CityBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "81_CityBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#65_UrbanPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "65_UrbanPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#27_UrbanBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "27_UrbanBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#80_TransPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "80_TransPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#61_MetroBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "61_MetroBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#84_TransSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "84_TransSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#16_CityMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "16_CityMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#100_TransPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "100_TransPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#12_CitySevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "12_CitySevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#63_MetroMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "63_MetroMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#87_MoviBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "87_MoviBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#82_CityMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "82_CityMadrid"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to a way of transport"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#RestaurantCategory",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RestaurantCategory",
+      "en" : "RestaurantCategory"
+    },
+    "subClasses" : [ "69", "70", "46", "71", "72" ],
+    "comment" : {
+      "en" : "Includes different restaurant categories"
+    },
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#HotelTypes",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HotelTypes",
+      "en" : "HotelTypes"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#Business",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Business"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Luxury",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Luxury"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Beach",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Beach"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Rural",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Rural"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Tourist",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Tourist"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of hotels"
+    },
+    "id" : "58",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#BusinessHotel",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BusinessHotel",
+      "en" : "BusinessHotel"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to hotels considered for business"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "43",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#TransportCategory",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransportCategory",
+      "en" : "TransportCategory"
+    },
+    "subClasses" : [ "64", "27", "55", "79", "63" ],
+    "comment" : {
+      "en" : "Includes different attraction categories"
+    },
+    "id" : "15",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#LuxuryHotel",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LuxuryHotel",
+      "en" : "LuxuryHotel"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to hotels considered luxurious"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "44",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#TechnologicalEvent",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TechnologicalEvent",
+      "en" : "TechnologicalEvent"
+    },
+    "intersection" : [ "24" ],
+    "comment" : {
+      "en" : "Refers to an event involving tecnology"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "100",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#CulturalCities",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CulturalCities",
+      "en" : "CulturalCities"
+    },
+    "comment" : {
+      "en" : "Refers to cities with cultural interest"
+    },
+    "id" : "54",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#TaxiTransport",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TaxiTransport",
+      "en" : "TaxiTransport"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to taxi transport"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "63",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#MexicanRestaurant",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MexicanRestaurant",
+      "en" : "MexicanRestaurant"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Mexico"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "69",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#CulturalEvent",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CulturalEvent",
+      "en" : "CulturalEvent"
+    },
+    "intersection" : [ "24" ],
+    "comment" : {
+      "en" : "Refers to an event involving any kind of cultural activity"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "96",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Category",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Category",
+      "en" : "Category"
+    },
+    "subClasses" : [ "12", "15", "6", "50", "48" ],
+    "comment" : {
+      "en" : "Global category, including different categories"
+    },
+    "id" : "13",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#JapaneseRestaurant",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "JapaneseRestaurant",
+      "en" : "JapaneseRestaurant"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Japan"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "70",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#RestaurantTypes",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RestaurantTypes",
+      "en" : "RestaurantType"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#Japanese",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Japanese"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Mediterranean",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Mediterranean"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Mexican",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Mexican"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Andalusian",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Andalusian"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Italianian",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Italianian"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of restaurants"
+    },
+    "id" : "59",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#GastronomicEvent",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GastronomicEvent",
+      "en" : "GastronomicEvent"
+    },
+    "intersection" : [ "24" ],
+    "comment" : {
+      "en" : "Refers to an event involving gastronomy"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "98",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#BeachAttraction",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BeachAttraction",
+      "en" : "BeachAttraction"
+    },
+    "intersection" : [ "23" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a beach"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "65",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Restaurant",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/Restaurant",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "en" : "Restaurant"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#61_RestaurantGourmetMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "61_RestaurantGourmetMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#66_RestaurantFusióBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "66_RestaurantFusióBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#72_RestaurantFusióBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "72_RestaurantFusióBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#59_RestaurantFusióCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "59_RestaurantFusióCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#60_RestaurantDeliciaSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "60_RestaurantDeliciaSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#71_RestaurantTradicióCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "71_RestaurantTradicióCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#34_RestaurantDeliciaSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "34_RestaurantDeliciaSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#45_RestaurantFusióSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "45_RestaurantFusióSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#65_RestaurantGourmetMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "65_RestaurantGourmetMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#9_RestaurantDeliciaMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "9_RestaurantDeliciaMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#4_RestaurantDeliciaMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "4_RestaurantDeliciaMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#40_RestaurantGourmetValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "40_RestaurantGourmetValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#10_RestaurantDeliciaCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "10_RestaurantDeliciaCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#94_RestaurantTradicióSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "94_RestaurantTradicióSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#95_RestaurantTradicióSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "95_RestaurantTradicióSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#36_RestaurantFusióSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "36_RestaurantFusióSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#62_RestaurantTradicióSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "62_RestaurantTradicióSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#52_RestaurantDeliciaSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "52_RestaurantDeliciaSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#96_RestaurantTradicióMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "96_RestaurantTradicióMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#100_RestaurantGourmetToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "100_RestaurantGourmetToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#19_RestaurantFusióMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "19_RestaurantFusióMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#63_RestaurantTradicióCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "63_RestaurantTradicióCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#58_RestaurantDeliciaSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "58_RestaurantDeliciaSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#54_RestaurantSaborSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "54_RestaurantSaborSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#49_RestaurantSaborMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "49_RestaurantSaborMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#82_RestaurantGourmetMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "82_RestaurantGourmetMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#88_RestaurantFusióBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "88_RestaurantFusióBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#98_RestaurantDeliciaSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "98_RestaurantDeliciaSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#38_RestaurantDeliciaPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "38_RestaurantDeliciaPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#29_RestaurantDeliciaValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "29_RestaurantDeliciaValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#30_RestaurantDeliciaPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "30_RestaurantDeliciaPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#8_RestaurantGourmetToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "8_RestaurantGourmetToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#46_RestaurantSaborMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "46_RestaurantSaborMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#25_RestaurantFusióSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "25_RestaurantFusióSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#23_RestaurantFusióSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "23_RestaurantFusióSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#2_RestaurantGourmetMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "2_RestaurantGourmetMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#85_RestaurantFusióMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "85_RestaurantFusióMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#1_RestaurantTradicióToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "1_RestaurantTradicióToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#89_RestaurantGourmetMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "89_RestaurantGourmetMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#87_RestaurantSaborValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "87_RestaurantSaborValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#97_RestaurantFusióSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "97_RestaurantFusióSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#84_RestaurantFusióPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "84_RestaurantFusióPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#81_RestaurantGourmetSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "81_RestaurantGourmetSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#99_RestaurantGourmetValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "99_RestaurantGourmetValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#92_RestaurantGourmetPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "92_RestaurantGourmetPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#77_RestaurantDeliciaSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "77_RestaurantDeliciaSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#83_RestaurantDeliciaBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "83_RestaurantDeliciaBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#5_RestaurantDeliciaPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "5_RestaurantDeliciaPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#20_RestaurantGourmetMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "20_RestaurantGourmetMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#6_RestaurantSaborSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "6_RestaurantSaborSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#33_RestaurantTradicióToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "33_RestaurantTradicióToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#48_RestaurantSaborSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "48_RestaurantSaborSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#14_RestaurantFusióValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "14_RestaurantFusióValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#3_RestaurantFusióValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "3_RestaurantFusióValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#93_RestaurantSaborSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "93_RestaurantSaborSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#53_RestaurantDeliciaCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "53_RestaurantDeliciaCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#27_RestaurantTradicióSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "27_RestaurantTradicióSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#28_RestaurantFusióCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "28_RestaurantFusióCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#11_RestaurantGourmetMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "11_RestaurantGourmetMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#90_RestaurantDeliciaSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "90_RestaurantDeliciaSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#68_estaurantGourmetBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "68_estaurantGourmetBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#26_RestaurantGourmetPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "26_RestaurantGourmetPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#17_RestaurantGourmetCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "17_RestaurantGourmetCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#79_RestaurantSaborMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "79_RestaurantSaborMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#70_RestaurantFusióSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "70_RestaurantFusióSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#13_RestaurantDeliciaSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "13_RestaurantDeliciaSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#39_RestaurantFusióToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "39_RestaurantFusióToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#15_RestaurantDeliciaSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "15_RestaurantDeliciaSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#56_RestaurantTradicióMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "56_RestaurantTradicióMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#64_RestaurantTradicióMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "64_RestaurantTradicióMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#41_RestaurantTradicióSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "41_RestaurantTradicióSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#50_RestaurantDeliciaBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "50_RestaurantDeliciaBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#57_RestaurantGourmetMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "57_RestaurantGourmetMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#73_RestaurantGourmetValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "73_RestaurantGourmetValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#43_RestaurantFusióBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "43_RestaurantFusióBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#42_RestaurantTradicióSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "42_RestaurantTradicióSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#74_RestaurantGourmetPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "74_RestaurantGourmetPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#69_RestaurantGourmetBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "69_RestaurantGourmetBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#67_RestaurantFusióToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "67_RestaurantFusióToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#51_RestaurantDeliciaSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "51_RestaurantDeliciaSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#55_RestaurantFusióMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "55_RestaurantFusióMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#22_RestaurantTradicióMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "22_RestaurantTradicióMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#78_RestaurantFusióValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "78_RestaurantFusióValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#44_RestaurantGourmetMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "44_RestaurantGourmetMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#7_RestaurantGourmetSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "7_RestaurantGourmetSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#37_RestaurantSaborValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "37_RestaurantSaborValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#76_RestaurantFusióValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "76_RestaurantFusióValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#16_RestaurantFusióPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "16_RestaurantFusióPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#80_RestaurantGourmetPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "80_RestaurantGourmetPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#32_RestaurantGourmetMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "32_RestaurantGourmetMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#24_RestaurantGourmetSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "24_RestaurantGourmetSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#47_RestaurantTradicióSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "47_RestaurantTradicióSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#12_RestaurantSaborCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "12_RestaurantSaborCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#86_RestaurantFusióCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "86_RestaurantFusióCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#91_RestaurantGourmetSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "91_RestaurantGourmetSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#35_RestaurantDeliciaSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "35_RestaurantDeliciaSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#21_RestaurantDeliciaMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "21_RestaurantDeliciaMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#31_RestaurantTradicióMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "31_RestaurantTradicióMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#18_RestaurantSaborCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "18_RestaurantSaborCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#75_RestaurantSaborSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "75_RestaurantSaborSevilla"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to a restaurant"
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#TransportTypes",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransportTypes",
+      "en" : "TransportType"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#Tram",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Tram"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Taxi",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Taxi"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#PublicBike",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "PublicBike"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Metro",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Metro"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Bus",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Bus"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of transports"
+    },
+    "id" : "60",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#RuralHotel",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RuralHotel",
+      "en" : "RuralHotel"
+    },
+    "intersection" : [ "3" ],
+    "comment" : {
+      "en" : "Refers to hotels considered rural"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "45",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#MediterraneanRestaurant",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MediterraneanRestaurant",
+      "en" : "MediterraneanHotel"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving mediterranean food"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "72",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#AndalusianRestaurant",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AndalusianRestaurant",
+      "en" : "AndalusianRestaurant"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "Refers to restaurants serving food from Andalusia"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "71",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "134",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "135",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "138",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "140",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#ParkAttraction",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ParkAttraction",
+      "en" : "ParkAttraction"
+    },
+    "intersection" : [ "23" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a park"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "66",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "141",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "144",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Attraction",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/Attraction",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Attraction",
+      "en" : "Attraction"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#42_MuseuMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "42_MuseuMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#80_ParcMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "80_ParcMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#8_ParcSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "8_ParcSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#38_PalauToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "38_PalauToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#33_MuseuBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "33_MuseuBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#19_PalauBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "19_PalauBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#59_CatedralBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "59_CatedralBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#30_CastellValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "30_CastellValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#79_CatedralPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "79_CatedralPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#6_PalauBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "6_PalauBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#86_MuseuSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "86_MuseuSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#91_CatedralSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "91_CatedralSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#51_PalauMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "51_PalauMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#95_CatedralValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "95_CatedralValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#71_ParcMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "71_ParcMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#68_CastellMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "68_CastellMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#16_CastellBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "16_CastellBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#7_CatedralSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "7_CatedralSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#98_ParcCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "98_ParcCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#35_PalauPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "35_PalauPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#94_CatedralToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "94_CatedralToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#9_CatedralPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "9_CatedralPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#61_PalauSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "61_PalauSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#28_ParcSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "28_ParcSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#62_CatedralValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "62_CatedralValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#76_PalauBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "76_PalauBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#36_ParcPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "36_ParcPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#55_ParcSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "55_ParcSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#10_CastellToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "10_CastellToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#78_CastellBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "78_CastellBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#25_ParcBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "25_ParcBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#83_CastellMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "83_CastellMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#100_MuseuBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "100_MuseuBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#43_ParcBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "43_ParcBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#15_CastellCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "15_CastellCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#5_CastellCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "5_CastellCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#58_CatedralMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "58_CatedralMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#20_CatedralBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "20_CatedralBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#82_PalauValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "82_PalauValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#87_ParcSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "87_ParcSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#73_CatedralValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "73_CatedralValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#12_CatedralCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "12_CatedralCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#52_CatedralMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "52_CatedralMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#74_PalauMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "74_PalauMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#13_PalauPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "13_PalauPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#69_ParcCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "69_ParcCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#17_ParcMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "17_ParcMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#75_CatedralToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "75_CatedralToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#27_CastellMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "27_CastellMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#60_ParcCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "60_ParcCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#31_PalauMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "31_PalauMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#39_CastellSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "39_CastellSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#97_CatedralSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "97_CatedralSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#50_ParcMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "50_ParcMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#67_ParcCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "67_ParcCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#41_CatedralToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "41_CatedralToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#88_PalauToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "88_PalauToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#11_ParcToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "11_ParcToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#93_ParcToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "93_ParcToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#99_CatedralBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "99_CatedralBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#85_CastellPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "85_CastellPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#18_MuseuMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "18_MuseuMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#84_CastellPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "84_CastellPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#4_MuseuMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "4_MuseuMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#45_CatedralBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "45_CatedralBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#92_MuseuCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "92_MuseuCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#53_CatedralValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "53_CatedralValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#49_CastellSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "49_CastellSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#26_CatedralSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "26_CatedralSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#56_MuseuToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "56_MuseuToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#77_PalauPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "77_PalauPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#40_PalauCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "40_PalauCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#57_ParcCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "57_ParcCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#54_CatedralToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "54_CatedralToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#24_CastellSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "24_CastellSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#34_MuseuSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "34_MuseuSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#72_ParcValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "72_ParcValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#70_CastellPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "70_CastellPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#32_MuseuSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "32_MuseuSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#14_CastellPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "14_CastellPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#90_MuseuPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "90_MuseuPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#66_MuseuSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "66_MuseuSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#37_CastellMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "37_CastellMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#64_MuseuSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "64_MuseuSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#46_MuseuToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "46_MuseuToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#22_CatedralValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "22_CatedralValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#63_MuseuSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "63_MuseuSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#81_ParcSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "81_ParcSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#1_CastellSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "1_CastellSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#3_CastellSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "3_CastellSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#96_MuseuMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "96_MuseuMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#23_CastellSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "23_CastellSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#29_CastellSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "29_CastellSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#2_CastellSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "2_CastellSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#47_PalauToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "47_PalauToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#21_CatedralMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "21_CatedralMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#65_ParcMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "65_ParcMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#48_ParcSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "48_ParcSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#89_CastellSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "89_CastellSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#44_MuseuSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "44_MuseuSevilla"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to an attraction type, which can be cultural, park, etc."
+    },
+    "id" : "23"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#MetroTransport",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MetroTransport",
+      "en" : "MetroTransport"
+    },
+    "intersection" : [ "1" ],
+    "comment" : {
+      "en" : "Refers to metro transport"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "79",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "164",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#MuseumAttraction",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MuseumAttraction",
+      "en" : "MuseumAttraction"
+    },
+    "intersection" : [ "23" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a museum"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "68",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#EventCategory",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventCategory",
+      "en" : "EventCategory"
+    },
+    "subClasses" : [ "96", "98", "100", "86", "49" ],
+    "comment" : {
+      "en" : "Includes different event categories"
+    },
+    "id" : "50",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#AttractionTypes",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AttractionTypes",
+      "en" : "AttractionType"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#Monument",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Monument"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Beach",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Beach"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Museum",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Museum"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Cultural",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Cultural"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#Park",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "Park"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to the category of attractions"
+    },
+    "id" : "61",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#MusicEvent",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MusicEvent",
+      "en" : "MusicEveent"
+    },
+    "intersection" : [ "24" ],
+    "comment" : {
+      "en" : "Refers to an event involving music"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "86",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "170",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "172",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#RecommendedRestaurants",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RecommendedRestaurants",
+      "en" : "RecommendedRestaurants"
+    },
+    "comment" : {
+      "en" : "Refers to restaurants that are recommended"
+    },
+    "id" : "52",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#BeachCities",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BeachCities",
+      "en" : "BeachCities"
+    },
+    "comment" : {
+      "en" : "Refers to cities located at the beach"
+    },
+    "id" : "53",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://purl.org/cityexplorer#MonumentAttraction",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MonumentAttraction",
+      "en" : "MonumentAttraction"
+    },
+    "intersection" : [ "23" ],
+    "comment" : {
+      "en" : "Refers to attractions involving a monument"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "67",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "182",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "187",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "188",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "191",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://purl.org/cityexplorer#Event",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "instances" : 0,
+    "annotations" : {
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "en",
+        "value" : "testing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.org/cityexplorer#17_CarnavalValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "17_CarnavalValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#89_FiraSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "89_FiraSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#36_ConcertPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "36_ConcertPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#4_CarnavalSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "4_CarnavalSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#21_FiraSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "21_FiraSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#39_FiraBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "39_FiraBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#49_ConcertSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "49_ConcertSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#93_ConcertCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "93_ConcertCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#50_FestivalValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "50_FestivalValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#10_CongrésBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "10_CongrésBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#28_FestivalToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "28_FestivalToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#80_ConcertMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "80_ConcertMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#70_CongrésSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "70_CongrésSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#79_CongrésCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "79_CongrésCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#42_FestivalPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "42_FestivalPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#43_FestivalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "43_FestivalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#41_ConcertToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "41_ConcertToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#76_ConcertMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "76_ConcertMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#85_FestivalSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "85_FestivalSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#84_FestivalSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "84_FestivalSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#20_CarnavalSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "20_CarnavalSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#69_CongrésSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "69_CongrésSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#86_FiraToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "86_FiraToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#16_ConcertSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "16_ConcertSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#59_FestivalMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "59_FestivalMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#54_FiraPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "54_FiraPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#96_CongrésBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "96_CongrésBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#99_FiraSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "99_FiraSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#83_ConcertCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "83_ConcertCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#66_FestivalValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "66_FestivalValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#14_CongrésToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "14_CongrésToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#31_FiraMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "31_FiraMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#97_CarnavalBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "97_CarnavalBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#98_CongrésSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "98_CongrésSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#11_CarnavalBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "11_CarnavalBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#53_FiraBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "53_FiraBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#37_FestivalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "37_FestivalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#19_ConcertValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "19_ConcertValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#44_CongrésSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "44_CongrésSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#3_CongrésBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "3_CongrésBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#25_CarnavalMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "25_CarnavalMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#6_CongrésBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "6_CongrésBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#18_FestivalSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "18_FestivalSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#29_FiraMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "29_FiraMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#38_CarnavalSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "38_CarnavalSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#15_FestivalSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "15_FestivalSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#100_FiraBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "100_FiraBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#48_FestivalBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "48_FestivalBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#13_CongrésValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "13_CongrésValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#67_ConcertToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "67_ConcertToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#26_CarnavalBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "26_CarnavalBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#90_CongrésValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "90_CongrésValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#40_FestivalValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "40_FestivalValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#32_ConcertPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "32_ConcertPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#47_FestivalValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "47_FestivalValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#27_CongrésBilbao",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "27_CongrésBilbao"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#91_CarnavalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "91_CarnavalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#30_FestivalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "30_FestivalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#7_FestivalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "7_FestivalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#63_FiraMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "63_FiraMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#60_FiraSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "60_FiraSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#46_CongrésValència",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "46_CongrésValència"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#56_FestivalBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "56_FestivalBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#34_CarnavalSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "34_CarnavalSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#73_CarnavalSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "73_CarnavalSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#57_CongrésBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "57_CongrésBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#58_CarnavalSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "58_CarnavalSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#71_FiraMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "71_FiraMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#23_CongrésSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "23_CongrésSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#64_FiraMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "64_FiraMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#87_FestivalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "87_FestivalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#92_FestivalCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "92_FestivalCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#74_CarnavalMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "74_CarnavalMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#72_FiraCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "72_FiraCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#62_CarnavalCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "62_CarnavalCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#45_CongrésBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "45_CongrésBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#52_CongrésToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "52_CongrésToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#77_FestivalToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "77_FestivalToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#94_FestivalMadrid",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "94_FestivalMadrid"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#65_CarnavalBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "65_CarnavalBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#35_ConcertToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "35_ConcertToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#12_FiraBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "12_FiraBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#33_FestivalBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "33_FestivalBarcelona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#68_FiraPamplona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "68_FiraPamplona"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#78_CarnavalCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "78_CarnavalCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#22_FestivalSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "22_FestivalSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#5_FiraToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "5_FiraToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#88_FestivalToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "88_FestivalToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#61_CarnavalToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "61_CarnavalToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#75_FiraSevilla",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "75_FiraSevilla"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#95_ConcertSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "95_ConcertSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#51_CarnavalMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "51_CarnavalMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#55_FiraSaragossa",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "55_FiraSaragossa"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#8_FiraMàlaga",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "8_FiraMàlaga"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#82_CongrésToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "82_CongrésToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#81_CongrésToledo",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "81_CongrésToledo"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#2_CarnavalCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "2_CarnavalCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#9_CongrésSantSebastià",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "9_CongrésSantSebastià"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#1_CongrésCadis",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "1_CongrésCadis"
+      }
+    }, {
+      "iri" : "https://purl.org/cityexplorer#24_CongrésBarcelona",
+      "baseIri" : "https://purl.org/cityexplorer",
+      "labels" : {
+        "IRI-based" : "24_CongrésBarcelona"
+      }
+    } ],
+    "comment" : {
+      "en" : "Refers to an event"
+    },
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "205",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "206",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "210",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "209",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "214",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "167",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "216",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  } ],
+  "property" : [ {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "122",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "123",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "124",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "127",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "128",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "131",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "132",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "133",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "136",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "137",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "139",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "142",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "143",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "145",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "146",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "156",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "162",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "163",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "166",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "168",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "169",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "171",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "175",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "177",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "178",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "179",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "180",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "181",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "183",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "186",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "189",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "190",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "192",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "193",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "194",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "195",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "196",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "198",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "199",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "200",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "201",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "202",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "203",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "207",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "208",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "211",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "212",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "213",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "215",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "217",
+    "type" : "owl:someValuesFrom"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "13",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#isCityOf",
+    "inverse" : "19",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "isCityOf",
+      "en" : "isCityOf"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates if the city contains the specific property"
+    },
+    "attributes" : [ "inverse functional", "object", "irreflexive", "asymmetric" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "33",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#hasCategory",
+    "inverse" : "39",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasCategory",
+      "en" : "hasCategory"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Indicate if a class has a specific category"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#company",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "company",
+      "en" : "Company"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The company of transport"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#isCategoryOf",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "isCategoryOf",
+      "en" : "isCategoryOf"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Indicates if a category is a category of a class"
+    },
+    "attributes" : [ "inverse functional", "object", "irreflexive", "asymmetric" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#longitude",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "35",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/longitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "longitude",
+      "en" : "Longitude"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The longitude of a location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "range" : "15",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "12",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "12",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "15",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "15",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "15",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "15",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "48",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "12",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "12",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "12",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "50",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#company",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "company",
+      "en" : "Company"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The company of transport"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  }, {
+    "range" : "50",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "48",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "range" : "48",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "48",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "21",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "21",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "50",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "50",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "50",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#priceRange",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "4",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#locatedInCity",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric" ],
+    "id" : "19"
+  }, {
+    "range" : "51",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "range" : "51",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "103"
+  }, {
+    "range" : "21",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "range" : "21",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "106"
+  }, {
+    "range" : "6",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
+  }, {
+    "range" : "6",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "range" : "6",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "range" : "6",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "range" : "51",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "51",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "13",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "13",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "13",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "29",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#latitude",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "34",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/latitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "latitude",
+      "en" : "Latitude"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The latitude of a location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "117"
+  }, {
+    "range" : "45",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "44",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "range" : "66",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "68",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "43",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "66",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "range" : "67",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#name",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "25",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "125"
+  }, {
+    "range" : "66",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "range" : "66",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "range" : "68",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#startDate",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "8",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/startDate",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "startDate"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The start date and time of the item"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "129"
+  }, {
+    "range" : "67",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "47",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "range" : "68",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#locatedInCity",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric", "someValues" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "135",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#aggregateRating",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "138",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#name",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "134",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "141",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "142"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#longitude",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "144",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/longitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "longitude",
+      "en" : "Longitude"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The longitude of a location"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "143"
+  }, {
+    "range" : "64",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "145"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#name",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "140",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "146"
+  }, {
+    "range" : "64",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "63",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "range" : "64",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
+  }, {
+    "range" : "63",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "55",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "64",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "152"
+  }, {
+    "range" : "63",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "29",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "range" : "29",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "55",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "156"
+  }, {
+    "range" : "79",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "range" : "45",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "44",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#starRating",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "7",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/starRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "starRating",
+      "en" : "starRating"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "An official rating for a lodging business or food establishment"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "160"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "29",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "164",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#aggregateRating",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "167",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "166"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#name",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "165",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "168"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#locatedInCity",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric", "someValues" ],
+    "id" : "169"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "172",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "171"
+  }, {
+    "range" : "100",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "173"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#startDate",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "170",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/startDate",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "startDate"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The start date and time of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "174"
+  }, {
+    "range" : "100",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "175"
+  }, {
+    "range" : "49",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "range" : "100",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "49",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "178"
+  }, {
+    "range" : "100",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "179"
+  }, {
+    "range" : "49",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "180"
+  }, {
+    "range" : "86",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#latitude",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "182",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/latitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "latitude",
+      "en" : "Latitude"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "The latitude of a location"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "183"
+  }, {
+    "range" : "86",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "184"
+  }, {
+    "range" : "98",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#locatedInCity",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric", "someValues" ],
+    "id" : "186"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#priceRange",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "188",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "189"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#aggregateRating",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "191",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "190"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "187",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "192"
+  }, {
+    "range" : "72",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "193"
+  }, {
+    "range" : "69",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "194"
+  }, {
+    "range" : "70",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "195"
+  }, {
+    "range" : "72",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "196"
+  }, {
+    "range" : "69",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "197"
+  }, {
+    "range" : "72",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "range" : "69",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
+  }, {
+    "range" : "69",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
+    "range" : "46",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "201"
+  }, {
+    "range" : "70",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#aggregateRating",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "30",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/aggregateRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aggregateRating",
+      "en" : "aggregateRating"
+    },
+    "domain" : "28",
+    "comment" : {
+      "en" : "The overall rating, based on a collection of reviews or ratings, of the item"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "203"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#locatedInCity",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric", "someValues" ],
+    "id" : "204"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#identifier",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "206",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The identifier of the object (city, etc.)"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "207"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#priceRange",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "209",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "208"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#name",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "205",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "211"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#priceRange",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "210",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/priceRange",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priceRange",
+      "en" : "priceRange"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The price range of the business"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "212"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#locatedInCity",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "locatedInCity"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Indicates if it's located in a city"
+    },
+    "attributes" : [ "functional", "object", "irreflexive", "asymmetric", "someValues" ],
+    "id" : "213"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#name",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "216",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Name"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The name of the item"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "215"
+  }, {
+    "iri" : "https://purl.org/cityexplorer#starRating",
+    "baseIri" : "https://purl.org/cityexplorer",
+    "range" : "214",
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://schema.org/starRating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "starRating",
+      "en" : "starRating"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "An official rating for a lodging business or food establishment"
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "217"
+  } ]
+}
