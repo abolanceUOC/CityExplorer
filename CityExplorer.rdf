@@ -33,8 +33,6 @@ Abel Bolance Olivares</terms:creator>
         <vann:preferredNamespaceUri xml:lang="en">https://purl.org/cityexplorer#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">CityExplorer :ce</rdfs:label>
         <owl:versionInfo xml:lang="en">version 1.0</owl:versionInfo>    
-<dcterms:doi>2025.04/cityexplorer</dcterms:doi>  <!-- Fictitious DOI -->
-<dcterms:status>draft</dcterms:status>  <!-- Project state -->
     </owl:Ontology>
     
 
