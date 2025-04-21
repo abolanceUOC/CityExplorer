@@ -26,13 +26,15 @@ https://schema.org/docs/schemas.html
 Sergi Tur Pinent
 Abel Bolance Olivares</terms:creator>
         <terms:description xml:lang="en">This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships. This ontology is part of a university project.</terms:description>
+        <terms:doi xml:lang="en">2025.04/CityExplorer</terms:doi>
         <terms:identifier xml:lang="en">https://purl.org/cityexplorer</terms:identifier>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en</terms:license>
+        <terms:status xml:lang="en">draft</terms:status>
         <terms:title xml:lang="en">CityExplorer Ontology</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">ce</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri xml:lang="en">https://purl.org/cityexplorer#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">CityExplorer :ce</rdfs:label>
-        <owl:versionInfo xml:lang="en">version 1.0</owl:versionInfo>    
+        <owl:versionInfo xml:lang="en">version 1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -72,6 +74,12 @@ Abel Bolance Olivares</terms:creator>
     
 
 
+    <!-- http://purl.org/dc/terms/doi -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/doi"/>
+    
+
+
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
@@ -81,6 +89,12 @@ Abel Bolance Olivares</terms:creator>
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/status"/>
     
 
 
@@ -8471,12 +8485,12 @@ Abel Bolance Olivares</terms:creator>
         <priceRange rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48</priceRange>
     </owl:NamedIndividual>
     <rdf:Description>
-        <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource.
 http://purl.org/dc/terms/creator</rdfs:comment>
         <rdfs:label xml:lang="en">creator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
     </rdf:Description>
     
 
