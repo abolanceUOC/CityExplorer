@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://purl.org/cityexplorer#"
+<rdf:RDF 
+     xml:base="https://purl.org/cityexplorer#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,8 +10,9 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org#"
+     xmlns:ce="https://purl.org/cityexplorer#"
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
-    <owl:Ontology rdf:about="https://purl.org/cityexplorer">
+    <owl:Ontology rdf:about="https://purl.org/cityexplorer#">
         <owl:versionIRI rdf:resource="https://purl.org/cityexplorer/1.0"/>    
 <terms:bibliographicCitation>https://service.tib.eu/webvowl/
 https://oops.linkeddata.es/
