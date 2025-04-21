@@ -12,6 +12,12 @@
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
     <owl:Ontology rdf:about="https://purl.org/cityexplorer">
         <owl:versionIRI rdf:resource="https://purl.org/cityexplorer/1.0"/>    
+<terms:bibliographicCitation>Per generar el grafic de la Ontología &lt;https://service.tib.eu/webvowl/&gt;
+Per validar la Ontologia &lt;https://oops.linkeddata.es/&gt;
+Per la generació de la documentació &gt;https://dgarijo.github.io/Widoco/doc/tutorial/&gt;
+Per la creació de les regles SWRL &lt;https://github.com/protegeproject/swrlapi/wiki&gt;
+Per validar la estructura del fitxer RDF &lt;https://www.w3.org/RDF/Validator/&gt;
+Per relacionar la Ontologia amb d’altres classes i propietats ja existents &lt;https://schema.org/docs/schemas.html&gt;</terms:bibliographicCitation>
         <terms:created>2025-04-15</terms:created>
         <terms:creator xml:lang="en">Carles Asensi Seguer
 Sergi Tur Pinent
