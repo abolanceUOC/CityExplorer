@@ -24,6 +24,7 @@ https://schema.org/docs/schemas.html
 Sergi Tur Pinent
 Abel Bolance Olivares</terms:creator>
         <terms:description xml:lang="en">This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships.</terms:description>
+        <terms:identifier xml:lang="en">https://purl.org/cityexplorer</terms:identifier>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en</terms:license>
         <terms:title xml:lang="en">CityExplorer Ontology</terms:title>
         <rdfs:label xml:lang="en">CityExplorer :ce</rdfs:label>
