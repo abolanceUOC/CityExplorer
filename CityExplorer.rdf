@@ -32,8 +32,7 @@ Abel Bolance Olivares</terms:creator>
         <vann:preferredNamespacePrefix xml:lang="en">ce</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri xml:lang="en">https://purl.org/cityexplorer#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">CityExplorer :ce</rdfs:label>
-        <owl:versionInfo xml:lang="en">version 1.0.0</owl:versionInfo>
-        <!-- Importar vocabulario de Dublin Core -->
+        <owl:versionInfo xml:lang="en">version 1.0.0</owl:versionInfo>        
         <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
     </owl:Ontology>
     
