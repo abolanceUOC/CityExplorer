@@ -10,8 +10,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org#"
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
-<Prefix name="URI" IRI="https://purl.org/cityexplorer"/>
-<Prefix name="CityExplorer" IRI="https://purl.org/cityexplorer#"/>
     <owl:Ontology rdf:about="https://purl.org/cityexplorer">
         <owl:versionIRI rdf:resource="https://purl.org/cityexplorer/1.0"/>    
 <terms:bibliographicCitation>https://service.tib.eu/webvowl/
