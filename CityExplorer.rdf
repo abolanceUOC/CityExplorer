@@ -14,6 +14,7 @@
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
     <owl:Ontology rdf:about="https://purl.org/cityexplorer#">
         <owl:versionIRI rdf:resource="https://purl.org/cityexplorer/1.0"/>
+        <terms:backwardCompatibility xml:lang="en">Backward compatible</terms:backwardCompatibility>
         <terms:bibliographicCitation>https://service.tib.eu/webvowl/
 https://oops.linkeddata.es/
 https://dgarijo.github.io/Widoco/doc/tutorial/
@@ -28,7 +29,13 @@ Abel Bolance Olivares</terms:creator>
         <terms:description xml:lang="en">This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships. This ontology is part of a university project.</terms:description>
         <terms:doi xml:lang="en">2025.04/CityExplorer</terms:doi>
         <terms:identifier xml:lang="en">https://purl.org/cityexplorer</terms:identifier>
+        <terms:issued xml:lang="en">2025-05-21</terms:issued>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en</terms:license>
+        <terms:logo xml:lang="en">logo</terms:logo>
+        <terms:modified xml:lang="en">2025-04-21</terms:modified>
+        <terms:previousVersion xml:lang="en">https://purl.org/cityexplorer/1.0</terms:previousVersion>
+        <terms:publisher xml:lang="en">REPRESENTACIÓ DEL CONEIXEMENT - PAC2</terms:publisher>
+        <terms:source xml:lang="en">https://purl.org/cityexplorer/data</terms:source>
         <terms:status xml:lang="en">draft</terms:status>
         <terms:title xml:lang="en">CityExplorer Ontology</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">ce</vann:preferredNamespacePrefix>
@@ -47,6 +54,12 @@ Abel Bolance Olivares</terms:creator>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/backwardCompatibility -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/backwardCompatibility"/>
     
 
 
@@ -86,9 +99,45 @@ Abel Bolance Olivares</terms:creator>
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/logo -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/logo"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/previousVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/previousVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
