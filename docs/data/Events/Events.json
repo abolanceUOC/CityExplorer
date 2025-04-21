@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"esdeveniments","startColumn":"A","endColumn":"H","startRow":"2","endRow":"+","comment":"Rules for importing individuals from the Event class.","rule":"Individual: @G* Types: Event Facts: identifier @H*(xsd:string), name @B*(xsd:string), locatedInCity @C*, \nstartDate @D*(xsd:dateTime),\nhasCategory @F*","active":true}]}

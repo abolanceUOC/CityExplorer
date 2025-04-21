@@ -1,0 +1,101 @@
+transport_id,tipus,ciutat,empresa,cost_mitja
+1,Metro,Madrid,Urban Madrid,8.85
+2,Taxi,Bilbao,Trans Bilbao,5.75
+3,Tramvia,Toledo,Trans Toledo,3.61
+4,Autobús,Saragossa,City Saragossa,5.79
+5,Metro,Cadis,Movi Cadis,4.63
+6,Bicicleta Pública,Pamplona,Trans Pamplona,8.48
+7,Taxi,Cadis,Metro Cadis,3.4
+8,Bicicleta Pública,Madrid,City Madrid,4.32
+9,Autobús,Barcelona,Metro Barcelona,8.72
+10,Autobús,Sevilla,Trans Sevilla,9.48
+11,Tramvia,València,Trans València,9.05
+12,Autobús,Sevilla,City Sevilla,8.03
+13,Metro,Cadis,City Cadis,5.87
+14,Taxi,Pamplona,Movi Pamplona,7.11
+15,Tramvia,Cadis,Movi Cadis,2.93
+16,Tramvia,Màlaga,City Màlaga,7.66
+17,Bicicleta Pública,Bilbao,Urban Bilbao,6.58
+18,Metro,Bilbao,Metro Bilbao,6.84
+19,Autobús,Bilbao,City Bilbao,8.58
+20,Taxi,Bilbao,Movi Bilbao,9.2
+21,Metro,Pamplona,City Pamplona,8.55
+22,Tramvia,Saragossa,Urban Saragossa,1.11
+23,Bicicleta Pública,Pamplona,Movi Pamplona,4.83
+24,Autobús,València,Urban València,7.57
+25,Taxi,Saragossa,Metro Saragossa,4.04
+26,Autobús,Pamplona,Metro Pamplona,2.9
+27,Autobús,Barcelona,Urban Barcelona,3.54
+28,Tramvia,Pamplona,Urban Pamplona,9.89
+29,Tramvia,Sant Sebastià,Metro Sant Sebastià,4.09
+30,Taxi,Màlaga,Urban Màlaga,2.87
+31,Taxi,Sant Sebastià,Urban Sant Sebastià,9.67
+32,Autobús,Madrid,Metro Madrid,4.18
+33,Autobús,Madrid,Metro Madrid,7.12
+34,Autobús,Sant Sebastià,Urban Sant Sebastià,1.12
+35,Taxi,Bilbao,Metro Bilbao,4.31
+36,Autobús,Barcelona,City Barcelona,2.12
+37,Metro,Màlaga,Trans Màlaga,7.55
+38,Tramvia,Madrid,Movi Madrid,5.09
+39,Taxi,Sevilla,Movi Sevilla,5.49
+40,Metro,Toledo,Urban Toledo,6.19
+41,Taxi,Barcelona,Metro Barcelona,3.57
+42,Autobús,Sevilla,Urban Sevilla,8.2
+43,Metro,Pamplona,City Pamplona,3.05
+44,Metro,Sant Sebastià,Movi Sant Sebastià,3.21
+45,Bicicleta Pública,Pamplona,Metro Pamplona,9.48
+46,Taxi,Pamplona,Metro Pamplona,4.31
+47,Taxi,Sant Sebastià,Movi Sant Sebastià,4.77
+48,Tramvia,Toledo,Movi Toledo,3.04
+49,Metro,Madrid,City Madrid,1.21
+50,Autobús,Saragossa,Urban Saragossa,8.0
+51,Autobús,Madrid,Urban Madrid,9.76
+52,Taxi,Madrid,Trans Madrid,8.92
+53,Metro,Toledo,Urban Toledo,5.6
+54,Taxi,Màlaga,Metro Màlaga,6.97
+55,Tramvia,Toledo,Movi Toledo,7.33
+56,Taxi,València,Trans València,6.46
+57,Autobús,València,Movi València,2.9
+58,Bicicleta Pública,Pamplona,Movi Pamplona,2.38
+59,Tramvia,Sant Sebastià,Metro Sant Sebastià,8.71
+60,Metro,Madrid,Urban Madrid,1.88
+61,Metro,Bilbao,Metro Bilbao,7.18
+62,Bicicleta Pública,Cadis,City Cadis,9.86
+63,Taxi,Màlaga,Metro Màlaga,7.8
+64,Taxi,Barcelona,City Barcelona,8.1
+65,Autobús,Pamplona,Urban Pamplona,4.56
+66,Bicicleta Pública,Sevilla,Metro Sevilla,5.15
+67,Taxi,Toledo,Metro Toledo,2.56
+68,Tramvia,Màlaga,Trans Màlaga,8.71
+69,Tramvia,Pamplona,Metro Pamplona,9.88
+70,Bicicleta Pública,Bilbao,Urban Bilbao,9.24
+71,Bicicleta Pública,Barcelona,Movi Barcelona,2.86
+72,Taxi,Sevilla,Urban Sevilla,6.15
+73,Tramvia,Cadis,Trans Cadis,1.65
+74,Bicicleta Pública,Sevilla,Urban Sevilla,3.09
+75,Autobús,Pamplona,Metro Pamplona,2.69
+76,Taxi,Madrid,City Madrid,4.06
+77,Tramvia,Madrid,Metro Madrid,8.3
+78,Tramvia,Bilbao,Movi Bilbao,7.47
+79,Tramvia,Sevilla,Trans Sevilla,9.83
+80,Tramvia,Pamplona,Trans Pamplona,5.84
+81,Tramvia,Bilbao,City Bilbao,2.69
+82,Bicicleta Pública,Madrid,City Madrid,6.8
+83,Tramvia,Toledo,City Toledo,4.59
+84,Autobús,Sant Sebastià,Trans Sant Sebastià,1.68
+85,Metro,Sevilla,Movi Sevilla,1.58
+86,Taxi,Sevilla,City Sevilla,1.98
+87,Bicicleta Pública,Barcelona,Movi Barcelona,6.29
+88,Tramvia,Saragossa,Trans Saragossa,7.14
+89,Tramvia,València,Urban València,9.37
+90,Tramvia,Saragossa,City Saragossa,1.9
+91,Taxi,Bilbao,Urban Bilbao,3.28
+92,Autobús,Madrid,Metro Madrid,2.82
+93,Metro,València,Trans València,2.22
+94,Autobús,Màlaga,Movi Màlaga,6.76
+95,Tramvia,Madrid,Trans Madrid,3.28
+96,Bicicleta Pública,Saragossa,Trans Saragossa,5.11
+97,Bicicleta Pública,Cadis,Trans Cadis,1.56
+98,Tramvia,Pamplona,City Pamplona,3.92
+99,Taxi,Sant Sebastià,Metro Sant Sebastià,1.05
+100,Autobús,Pamplona,Trans Pamplona,3.14

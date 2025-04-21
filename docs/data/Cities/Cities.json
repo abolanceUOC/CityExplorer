@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Cities","startColumn":"A","endColumn":"E","startRow":"2","endRow":"+","comment":"Rules for importing individuals from the City class.","rule":"Individual: @B* Types: City\nFacts:\n  identifier @E*(xsd:string),\n  name @B*(xsd:string),\n  latitude @C*(xsd:string),\n  longitude @C*(xsd:string)","active":true}]}

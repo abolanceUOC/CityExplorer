@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"transport","startColumn":"A","endColumn":"G","startRow":"2","endRow":"+","comment":"Rules for importing individuals from the Transport class.","rule":"Individual: @G* Types: Transport Facts: identifier @H*(xsd:string), company @D*(xsd:string),\npriceRange @E*(xsd:decimal), \nhasCategory @F*,\nlocatedInCity @C*","active":true}]}

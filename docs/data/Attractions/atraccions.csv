@@ -1,0 +1,101 @@
+atraccio_id,nom,ciutat,tipus,valoracio
+1,Castell Saragossa,Saragossa,Museu,3;7
+2,Castell Sevilla,Sevilla,Monument,4;6
+3,Castell Saragossa,Saragossa,Museu,5;0
+4,Museu Madrid,Madrid,Museu,3;7
+5,Castell Cadis,Cadis,Platja,3;5
+6,Palau Bilbao,Bilbao,Museu,4;9
+7,Catedral Sevilla,Sevilla,Platja,4;1
+8,Parc Sant Sebastià,Sant Sebastià,Parc,4;9
+9,Catedral Pamplona,Pamplona,Monument,4;4
+10,Castell Toledo,Toledo,Monument,3;7
+11,Parc Toledo,Toledo,Monument,4;8
+12,Catedral Cadis,Cadis,Parc,4;4
+13,Palau Pamplona,Pamplona,Cultural,4;0
+14,Castell Pamplona,Pamplona,Platja,3;9
+15,Castell Cadis,Cadis,Monument,4;0
+16,Castell Barcelona,Barcelona,Cultural,4;5
+17,Parc Madrid,Madrid,Cultural,3;8
+18,Museu Màlaga,Màlaga,Parc,4;3
+19,Palau Barcelona,Barcelona,Cultural,4;7
+20,Catedral Barcelona,Barcelona,Platja,3;7
+21,Catedral Màlaga,Màlaga,Parc,4;4
+22,Catedral València,València,Monument,3;6
+23,Castell Sant Sebastià,Sant Sebastià,Parc,4;3
+24,Castell Saragossa,Saragossa,Parc,3;5
+25,Parc Bilbao,Bilbao,Platja,4;6
+26,Catedral Saragossa,Saragossa,Platja,3;6
+27,Castell Màlaga,Màlaga,Cultural,4;4
+28,Parc Sant Sebastià,Sant Sebastià,Cultural,4;2
+29,Castell Sant Sebastià,Sant Sebastià,Museu,4;8
+30,Castell València,València,Platja,4;7
+31,Palau Màlaga,Màlaga,Cultural,3;9
+32,Museu Saragossa,Saragossa,Monument,3;7
+33,Museu Barcelona,Barcelona,Museu,3;8
+34,Museu Saragossa,Saragossa,Platja,4;3
+35,Palau Pamplona,Pamplona,Platja,4;7
+36,Parc Pamplona,Pamplona,Monument,4;1
+37,Castell Madrid,Madrid,Museu,4;0
+38,Palau Toledo,Toledo,Parc,3;8
+39,Castell Sant Sebastià,Sant Sebastià,Parc,4;5
+40,Palau Cadis,Cadis,Platja,4;9
+41,Catedral Toledo,Toledo,Monument,4;6
+42,Museu Madrid,Madrid,Parc,3;5
+43,Parc Barcelona,Barcelona,Parc,4;9
+44,Museu Sevilla,Sevilla,Platja,4;0
+45,Catedral Barcelona,Barcelona,Museu,4;3
+46,Museu Toledo,Toledo,Monument,4;2
+47,Palau Toledo,Toledo,Monument,3;6
+48,Parc Sant Sebastià,Sant Sebastià,Parc,4;8
+49,Castell Sant Sebastià,Sant Sebastià,Cultural,3;8
+50,Parc Màlaga,Màlaga,Platja,4;4
+51,Palau Madrid,Madrid,Museu,3;9
+52,Catedral Madrid,Madrid,Platja,4;6
+53,Catedral València,València,Museu,4;3
+54,Catedral Toledo,Toledo,Platja,4;0
+55,Parc Saragossa,Saragossa,Museu,4;5
+56,Museu Toledo,Toledo,Cultural,4;2
+57,Parc Cadis,Cadis,Parc,4;3
+58,Catedral Màlaga,Màlaga,Museu,4;1
+59,Catedral Bilbao,Bilbao,Parc,3;7
+60,Parc Cadis,Cadis,Museu,4;2
+61,Palau Saragossa,Saragossa,Parc,4;4
+62,Catedral València,València,Monument,4;0
+63,Museu Saragossa,Saragossa,Parc,4;1
+64,Museu Sant Sebastià,Sant Sebastià,Platja,4;2
+65,Parc Màlaga,Màlaga,Museu,4;0
+66,Museu Sant Sebastià,Sant Sebastià,Platja,4;5
+67,Parc Cadis,Cadis,Museu,4;1
+68,Castell Madrid,Madrid,Monument,4;0
+69,Parc Cadis,Cadis,Parc,4;6
+70,Castell Pamplona,Pamplona,Museu,4;8
+71,Parc Madrid,Madrid,Platja,4;3
+72,Parc València,València,Museu,3;7
+73,Catedral València,València,Monument,4;6
+74,Palau Madrid,Madrid,Monument,4;6
+75,Catedral Toledo,Toledo,Cultural,3;7
+76,Palau Barcelona,Barcelona,Platja,4;3
+77,Palau Pamplona,Pamplona,Platja,4;3
+78,Castell Bilbao,Bilbao,Platja,4;4
+79,Catedral Pamplona,Pamplona,Platja,4;0
+80,Parc Madrid,Madrid,Parc,4;9
+81,Parc Sevilla,Sevilla,Cultural,4;6
+82,Palau València,València,Parc,3;8
+83,Castell Màlaga,Màlaga,Platja,4;3
+84,Castell Pamplona,Pamplona,Museu,3;7
+85,Castell Pamplona,Pamplona,Monument,3;6
+86,Museu Saragossa,Saragossa,Museu,3;8
+87,Parc Sant Sebastià,Sant Sebastià,Monument,3;9
+88,Palau Toledo,Toledo,Museu,3;8
+89,Castell Saragossa,Saragossa,Museu,4;1
+90,Museu Pamplona,Pamplona,Platja,5;0
+91,Catedral Sevilla,Sevilla,Cultural,4;6
+92,Museu Cadis,Cadis,Platja,4;6
+93,Parc Toledo,Toledo,Platja,3;8
+94,Catedral Toledo,Toledo,Platja,4;3
+95,Catedral València,València,Parc,4;8
+96,Museu Madrid,Madrid,Cultural,4;2
+97,Catedral Saragossa,Saragossa,Platja,4;6
+98,Parc Cadis,Cadis,Museu,4;7
+99,Catedral Bilbao,Bilbao,Cultural,4;9
+100,Museu Bilbao,Bilbao,Parc,4;9

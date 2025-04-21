@@ -1,0 +1,101 @@
+hotel_id,nom,ciutat,estrelles,preu_nit,valoracio,tipus_hotel
+1,Hotel Vista Sevilla,Sevilla,4,278,4;7,Platja
+2,Hotel Royal Pamplona,Pamplona,3,56,3;9,Luxe
+3,Hotel Royal Màlaga,Màlaga,5,175,4;6,Turistic
+4,Hotel Royal Bilbao,Bilbao,3,232,3;6,Turistic
+5,Hotel Palace Saragossa,Saragossa,4,120,3;8,Luxe
+6,Hotel Royal Sant Sebastià,Sant Sebastià,5,245,4;4,Negocis
+7,Hotel Royal València,València,5,76,4;7,Turistic
+8,Hotel Vista Cadis,Cadis,4,150,4;0,Platja
+9,Hotel Royal Barcelona,Barcelona,4,252,4;0,Platja
+10,Hotel Royal Cadis,Cadis,3,196,3;8,Turistic
+11,Hotel Royal Madrid,Madrid,3,146,4;4,Negocis
+12,Hotel Royal Madrid,Madrid,4,50,3;9,Turistic
+13,Hotel Del Mar Sevilla,Sevilla,5,95,4;4,Turistic
+14,Hotel Palace Madrid,Madrid,5,91,4;5,Negocis
+15,Hotel Palace Cadis,Cadis,3,287,4;8,Negocis
+16,Hotel Palace Saragossa,Saragossa,5,199,4;9,Negocis
+17,Hotel Del Mar Toledo,Toledo,5,145,4;3,Platja
+18,Hotel Palace Madrid,Madrid,4,290,4;2,Turistic
+19,Hotel Sol Bilbao,Bilbao,5,290,4;6,Platja
+20,Hotel Vista València,València,3,149,4;6,Turistic
+21,Hotel Sol València,València,5,291,4;8,Luxe
+22,Hotel Vista Màlaga,Màlaga,5,238,4;4,Negocis
+23,Hotel Vista Toledo,Toledo,3,99,4;6,Turistic
+24,Hotel Royal Saragossa,Saragossa,4,150,4;4,Negocis
+25,Hotel Royal Sevilla,Sevilla,5,92,3;7,Turistic
+26,Hotel Sol Cadis,Cadis,4,151,4;6,Turistic
+27,Hotel Sol Bilbao,Bilbao,5,56,4;9,Negocis
+28,Hotel Del Mar Sant Sebastià,Sant Sebastià,3,110,3;9,Luxe
+29,Hotel Royal Madrid,Madrid,5,131,4;4,Platja
+30,Hotel Del Mar Pamplona,Pamplona,4,270,4;4,Negocis
+31,Hotel Vista Madrid,Madrid,3,117,4;4,Turistic
+32,Hotel Palace Toledo,Toledo,5,74,3;8,Rural
+33,Hotel Sol Barcelona,Barcelona,5,189,3;5,Rural
+34,Hotel Del Mar Barcelona,Barcelona,5,250,4;1,Turistic
+35,Hotel Del Mar Pamplona,Pamplona,5,59,3;6,Turistic
+36,Hotel Palace Saragossa,Saragossa,5,298,3;9,Platja
+37,Hotel Del Mar València,València,3,139,3;8,Rural
+38,Hotel Del Mar Màlaga,Màlaga,3,196,4;8,Rural
+39,Hotel Sol Saragossa,Saragossa,3,262,3;6,Luxe
+40,Hotel Del Mar Sant Sebastià,Sant Sebastià,4,270,3;7,Rural
+41,Hotel Royal Cadis,Cadis,3,81,4;8,Platja
+42,Hotel Palace Madrid,Madrid,5,227,5;0,Luxe
+43,Hotel Royal Pamplona,Pamplona,5,116,4;3,Rural
+44,Hotel Vista Saragossa,Saragossa,5,131,4;7,Luxe
+45,Hotel Royal Barcelona,Barcelona,4,269,4;9,Platja
+46,Hotel Vista Sevilla,Sevilla,5,292,4;9,Turistic
+47,Hotel Del Mar Sant Sebastià,Sant Sebastià,4,65,4;1,Turistic
+48,Hotel Palace Màlaga,Màlaga,3,195,4;8,Turistic
+49,Hotel Vista Pamplona,Pamplona,5,98,4;2,Rural
+50,Hotel Sol Cadis,Cadis,5,260,4;9,Negocis
+51,Hotel Palace Pamplona,Pamplona,5,79,4;1,Platja
+52,Hotel Sol Sevilla,Sevilla,3,146,4;7,Negocis
+53,Hotel Del Mar Màlaga,Màlaga,5,65,4;7,Platja
+54,Hotel Palace Toledo,Toledo,5,174,4;7,Luxe
+55,Hotel Vista Cadis,Cadis,5,254,4;5,Turistic
+56,Hotel Del Mar Cadis,Cadis,5,167,4;4,Luxe
+57,Hotel Sol Sevilla,Sevilla,5,56,4;2,Luxe
+58,Hotel Del Mar Sevilla,Sevilla,5,208,4;9,Negocis
+59,Hotel Vista Sant Sebastià,Sant Sebastià,4,99,3;7,Rural
+60,Hotel Del Mar Barcelona,Barcelona,4,298,4;6,Platja
+61,Hotel Del Mar Cadis,Cadis,3,283,4;4,Platja
+62,Hotel Palace Barcelona,Barcelona,4,106,3;8,Rural
+63,Hotel Sol Barcelona,Barcelona,4,181,5;0,Turistic
+64,Hotel Palace Barcelona,Barcelona,3,251,4;3,Negocis
+65,Hotel Palace Toledo,Toledo,5,193,4;2,Luxe
+66,Hotel Sol Madrid,Madrid,3,114,4;9,Negocis
+67,Hotel Vista Madrid,Madrid,4,71,4;2,Rural
+68,Hotel Del Mar Madrid,Madrid,3,172,3;8,Luxe
+69,Hotel Royal Madrid,Madrid,3,203,5;0,Platja
+70,Hotel Royal Saragossa,Saragossa,3,165,4;6,Platja
+71,Hotel Del Mar Màlaga,Màlaga,5,196,4;7,Platja
+72,Hotel Del Mar Saragossa,Saragossa,3,170,5;0,Platja
+73,Hotel Vista Sant Sebastià,Sant Sebastià,4,227,4;3,Rural
+74,Hotel Palace Pamplona,Pamplona,4,58,4;5,Luxe
+75,Hotel Royal Madrid,Madrid,3,67,3;9,Rural
+76,Hotel Vista Barcelona,Barcelona,3,251,4;3,Rural
+77,Hotel Sol Barcelona,Barcelona,4,222,4;6,Luxe
+78,Hotel Royal Bilbao,Bilbao,3,164,3;7,Rural
+79,Hotel Sol Màlaga,Màlaga,5,84,4;9,Negocis
+80,Hotel Vista Sant Sebastià,Sant Sebastià,4,220,4;5,Negocis
+81,Hotel Vista Barcelona,Barcelona,4,74,3;7,Turistic
+82,Hotel Palace Bilbao,Bilbao,5,286,3;7,Turistic
+83,Hotel Palace Cadis,Cadis,3,251,4;4,Rural
+84,Hotel Vista Madrid,Madrid,4,150,4;0,Rural
+85,Hotel Palace Madrid,Madrid,4,65,4;3,Rural
+86,Hotel Vista Toledo,Toledo,5,70,4;6,Platja
+87,Hotel Sol Sant Sebastià,Sant Sebastià,4,75,4;7,Negocis
+88,Hotel Vista Barcelona,Barcelona,3,149,4;9,Platja
+89,Hotel Vista Bilbao,Bilbao,5,148,4;9,Platja
+90,Hotel Del Mar Sevilla,Sevilla,5,121,4;2,Platja
+91,Hotel Del Mar València,València,4,283,4;7,Negocis
+92,Hotel Royal Màlaga,Màlaga,3,150,4;2,Rural
+93,Hotel Del Mar Madrid,Madrid,4,177,4;7,Turistic
+94,Hotel Vista Bilbao,Bilbao,3,253,3;7,Negocis
+95,Hotel Palace Pamplona,Pamplona,5,177,3;9,Turistic
+96,Hotel Vista Pamplona,Pamplona,3,109,4;4,Rural
+97,Hotel Palace Màlaga,Màlaga,3,160,4;6,Negocis
+98,Hotel Palace Madrid,Madrid,4,284,4;1,Rural
+99,Hotel Sol Sevilla,Sevilla,5,120,4;0,Platja
+100,Hotel Palace Màlaga,Màlaga,3,198,4;2,Rural
