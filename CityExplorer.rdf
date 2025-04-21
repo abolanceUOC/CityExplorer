@@ -25,6 +25,8 @@ https://schema.org/docs/schemas.html
         <terms:creator xml:lang="en">Carles Asensi Seguer
 Sergi Tur Pinent
 Abel Bolance Olivares</terms:creator>
+<vann:preferredNamespacePrefix>ce</vann:preferredNamespacePrefix>
+<vann:preferredNamespaceUri>https://purl.org/cityexplorer#</vann:preferredNamespaceUri>
         <terms:description xml:lang="en">This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships.</terms:description>
         <terms:identifier xml:lang="en">https://purl.org/cityexplorer</terms:identifier>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en</terms:license>
