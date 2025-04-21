@@ -6,6 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix schema: <https://schema.org#> .
@@ -29,6 +30,8 @@ Abel Bolance Olivares"""@en ;
                                   terms:identifier "https://purl.org/cityexplorer"@en ;
                                   terms:license "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en"@en ;
                                   terms:title "CityExplorer Ontology"@en ;
+                                  vann:preferredNamespacePrefix "ce"@en ;
+                                  vann:preferredNamespaceUri "https://purl.org/cityexplorer#"@en ;
                                   rdfs:label "CityExplorer :ce"@en ;
                                   owl:versionInfo "version 1.0.0"@en .
 
@@ -62,6 +65,14 @@ terms:license rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/title
 terms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
