@@ -6,14 +6,18 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:rdfs2="https://schema.org/rdfs:"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org#"
+     xmlns:schema1="https://schema.org/"
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
     <owl:Ontology rdf:about="https://purl.org/cityexplorer#">
         <owl:versionIRI rdf:resource="https://purl.org/cityexplorer/1.0"/>
+        <owl:imports rdf:resource="https://schema.org/version/latest/schemaorg-current-https.rdf"/>
         <terms:bibliographicCitation>https://service.tib.eu/webvowl/
 https://oops.linkeddata.es/
 https://dgarijo.github.io/Widoco/doc/tutorial/
@@ -607,6 +611,7 @@ Abel Bolance Olivares</terms:creator>
     <!-- https://purl.org/cityexplorer#City -->
 
     <owl:Class rdf:about="https://purl.org/cityexplorer#City">
+        <owl:equivalentClass rdf:resource="https://schema.org/City"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purl.org/cityexplorer#identifier"/>
@@ -8471,12 +8476,12 @@ Abel Bolance Olivares</terms:creator>
         <priceRange rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48</priceRange>
     </owl:NamedIndividual>
     <rdf:Description>
-        <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource.
 http://purl.org/dc/terms/creator</rdfs:comment>
         <rdfs:label xml:lang="en">creator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
     </rdf:Description>
     
 
