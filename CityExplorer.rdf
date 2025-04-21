@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.org/cityexplorer#"
      xml:base="https://purl.org/cityexplorer"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -27,16 +28,13 @@ https://schema.org/docs/schemas.html
 Sergi Tur Pinent
 Abel Bolance Olivares</terms:creator>
         <terms:description xml:lang="en">This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships. This ontology is part of a university project.</terms:description>
-        <terms:doi xml:lang="en">2025.04/CityExplorer</terms:doi>
         <terms:identifier xml:lang="en">https://purl.org/cityexplorer</terms:identifier>
         <terms:issued xml:lang="en">2025-05-21</terms:issued>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en</terms:license>
-        <terms:logo xml:lang="en">logo</terms:logo>
         <terms:modified xml:lang="en">2025-04-21</terms:modified>
         <terms:previousVersion xml:lang="en">https://purl.org/cityexplorer/1.0</terms:previousVersion>
         <terms:publisher xml:lang="en">REPRESENTACIÓ DEL CONEIXEMENT - PAC2</terms:publisher>
         <terms:source xml:lang="en">https://purl.org/cityexplorer/data</terms:source>
-        <terms:status xml:lang="en">draft</terms:status>
         <terms:title xml:lang="en">CityExplorer Ontology</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">ce</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri xml:lang="en">https://purl.org/cityexplorer#</vann:preferredNamespaceUri>
@@ -87,12 +85,6 @@ Abel Bolance Olivares</terms:creator>
     
 
 
-    <!-- http://purl.org/dc/terms/doi -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/doi"/>
-    
-
-
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
@@ -108,12 +100,6 @@ Abel Bolance Olivares</terms:creator>
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/logo -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/logo"/>
     
 
 
@@ -138,12 +124,6 @@ Abel Bolance Olivares</terms:creator>
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/status -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/status"/>
     
 
 
@@ -174,6 +154,12 @@ Abel Bolance Olivares</terms:creator>
     <!-- http://www.w3.org/2002/07/owl#equivalentClass -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
     
 
 
@@ -478,6 +464,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#RestaurantCategory"/>
         <rdfs:comment xml:lang="en">Refers to restaurants serving food from Andalusia</rdfs:comment>
         <rdfs:label xml:lang="en">AndalusianRestaurant</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -519,6 +506,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:comment xml:lang="en">Refers to an attraction type, which can be cultural, park, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Attraction</rdfs:label>
         <rdfs:sameAs xml:lang="en">https://schema.org/Attraction</rdfs:sameAs>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -529,6 +517,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different attraction categories</rdfs:comment>
         <rdfs:label xml:lang="en">AttractionCategory</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -550,6 +539,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#CategoryTypes"/>
         <rdfs:comment xml:lang="en">Refers to the category of attractions</rdfs:comment>
         <rdfs:label xml:lang="en">AttractionType</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -571,6 +561,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#AttractionCategory"/>
         <rdfs:comment xml:lang="en">Refers to attractions involving a beach</rdfs:comment>
         <rdfs:label xml:lang="en">BeachAttraction</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -581,6 +572,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Refers to cities located at the beach</rdfs:comment>
         <rdfs:label xml:lang="en">BeachCities</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -602,6 +594,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#HotelCategory"/>
         <rdfs:comment xml:lang="en">Refers to hotels at the beach</rdfs:comment>
         <rdfs:label xml:lang="en">BeachHotel</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -623,6 +616,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#TransportCategory"/>
         <rdfs:comment xml:lang="en">Refers to bus transport</rdfs:comment>
         <rdfs:label xml:lang="en">BusTransport</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -644,6 +638,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#HotelCategory"/>
         <rdfs:comment xml:lang="en">Refers to hotels considered for business</rdfs:comment>
         <rdfs:label xml:lang="en">BusinessHotel</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -654,6 +649,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Global category, including different categories</rdfs:comment>
         <rdfs:label xml:lang="en">Category</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -663,6 +659,7 @@ Abel Bolance Olivares</terms:creator>
     <owl:Class rdf:about="https://purl.org/cityexplorer#CategoryTypes">
         <rdfs:comment xml:lang="en">Refers to different types of categories</rdfs:comment>
         <rdfs:label xml:lang="en">CategoryTypes</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -697,6 +694,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:comment xml:lang="en">Refers to a city</rdfs:comment>
         <rdfs:label xml:lang="en">City</rdfs:label>
         <owl:equivalentClass xml:lang="en">https://schema.org/City</owl:equivalentClass>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -718,6 +716,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#AttractionCategory"/>
         <rdfs:comment xml:lang="en">Refers to attractions involving any kind of cultural activity</rdfs:comment>
         <rdfs:label xml:lang="en">CulturalAttraction</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -728,6 +727,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Refers to cities with cultural interest</rdfs:comment>
         <rdfs:label xml:lang="en">CulturalCities</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -749,6 +749,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#EventCategory"/>
         <rdfs:comment xml:lang="en">Refers to an event involving any kind of cultural activity</rdfs:comment>
         <rdfs:label xml:lang="en">CulturalEvent</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -789,6 +790,7 @@ Abel Bolance Olivares</terms:creator>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Refers to an event</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -799,6 +801,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different event categories</rdfs:comment>
         <rdfs:label xml:lang="en">EventCategory</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -820,6 +823,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#CategoryTypes"/>
         <rdfs:comment xml:lang="en">Refers to the category of events</rdfs:comment>
         <rdfs:label xml:lang="en">EventTypes</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -841,6 +845,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#EventCategory"/>
         <rdfs:comment xml:lang="en">Refers to an event involving gastronomy</rdfs:comment>
         <rdfs:label xml:lang="en">GastronomicEvent</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -894,6 +899,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:comment xml:lang="en">Refers to an hotel</rdfs:comment>
         <rdfs:label xml:lang="en">Hotel</rdfs:label>
         <rdfs:sameAs>https://schema.org/Hotel</rdfs:sameAs>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -904,6 +910,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different hotel categories</rdfs:comment>
         <rdfs:label xml:lang="en">HotelCategory</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -925,6 +932,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#CategoryTypes"/>
         <rdfs:comment xml:lang="en">Refers to the category of hotels</rdfs:comment>
         <rdfs:label xml:lang="en">HotelTypes</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -946,6 +954,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#RestaurantCategory"/>
         <rdfs:comment xml:lang="en">Refers to restaurants serving food from Italy</rdfs:comment>
         <rdfs:label xml:lang="en">ItalianRestaurant</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -967,6 +976,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#RestaurantCategory"/>
         <rdfs:comment xml:lang="en">Refers to restaurants serving food from Japan</rdfs:comment>
         <rdfs:label xml:lang="en">JapaneseRestaurant</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -988,6 +998,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#HotelCategory"/>
         <rdfs:comment xml:lang="en">Refers to hotels considered luxurious</rdfs:comment>
         <rdfs:label xml:lang="en">LuxuryHotel</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1009,6 +1020,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#RestaurantCategory"/>
         <rdfs:comment xml:lang="en">Refers to restaurants serving mediterranean food</rdfs:comment>
         <rdfs:label xml:lang="en">MediterraneanHotel</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1030,6 +1042,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#TransportCategory"/>
         <rdfs:comment xml:lang="en">Refers to metro transport</rdfs:comment>
         <rdfs:label xml:lang="en">MetroTransport</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1051,6 +1064,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#RestaurantCategory"/>
         <rdfs:comment xml:lang="en">Refers to restaurants serving food from Mexico</rdfs:comment>
         <rdfs:label xml:lang="en">MexicanRestaurant</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1072,6 +1086,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#AttractionCategory"/>
         <rdfs:comment xml:lang="en">Refers to attractions involving a monument</rdfs:comment>
         <rdfs:label xml:lang="en">MonumentAttraction</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1093,6 +1108,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#AttractionCategory"/>
         <rdfs:comment xml:lang="en">Refers to attractions involving a museum</rdfs:comment>
         <rdfs:label xml:lang="en">MuseumAttraction</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1114,6 +1130,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#EventCategory"/>
         <rdfs:comment xml:lang="en">Refers to an event involving music</rdfs:comment>
         <rdfs:label xml:lang="en">MusicEveent</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1135,6 +1152,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#AttractionCategory"/>
         <rdfs:comment xml:lang="en">Refers to attractions involving a park</rdfs:comment>
         <rdfs:label xml:lang="en">ParkAttraction</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1156,6 +1174,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#TransportCategory"/>
         <rdfs:comment xml:lang="en">Refers to public bike transport</rdfs:comment>
         <rdfs:label xml:lang="en">PublicBike</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1166,6 +1185,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:comment xml:lang="en">Base class to make searches based on rules</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://schema.org/Recommendation</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Recommendations</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1176,6 +1196,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Recommendation"/>
         <rdfs:comment xml:lang="en">Refers to restaurants that are recommended</rdfs:comment>
         <rdfs:label xml:lang="en">RecommendedRestaurants</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1223,6 +1244,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:comment xml:lang="en">Refers to a restaurant</rdfs:comment>
         <rdfs:label xml:lang="en">Restaurant</rdfs:label>
         <rdfs:sameAs xml:lang="en">https://schema.org/Restaurant</rdfs:sameAs>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1233,6 +1255,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different restaurant categories</rdfs:comment>
         <rdfs:label xml:lang="en">RestaurantCategory</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1254,6 +1277,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#CategoryTypes"/>
         <rdfs:comment xml:lang="en">Refers to the category of restaurants</rdfs:comment>
         <rdfs:label xml:lang="en">RestaurantType</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1275,6 +1299,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#HotelCategory"/>
         <rdfs:comment xml:lang="en">Refers to hotels considered rural</rdfs:comment>
         <rdfs:label xml:lang="en">RuralHotel</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1296,6 +1321,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#EventCategory"/>
         <rdfs:comment xml:lang="en">Refers to an event involving sports</rdfs:comment>
         <rdfs:label xml:lang="en">SportsEvent</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1317,6 +1343,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#TransportCategory"/>
         <rdfs:comment xml:lang="en">Refers to taxi transport</rdfs:comment>
         <rdfs:label xml:lang="en">TaxiTransport</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1338,6 +1365,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#EventCategory"/>
         <rdfs:comment xml:lang="en">Refers to an event involving tecnology</rdfs:comment>
         <rdfs:label xml:lang="en">TechnologicalEvent</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1359,6 +1387,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#HotelCategory"/>
         <rdfs:comment xml:lang="en">Refers to touristic hotels</rdfs:comment>
         <rdfs:label xml:lang="en">TouristHotel</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1380,6 +1409,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#TransportCategory"/>
         <rdfs:comment xml:lang="en">Refers to tram transport</rdfs:comment>
         <rdfs:label xml:lang="en">TramTransport</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1420,6 +1450,7 @@ Abel Bolance Olivares</terms:creator>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Refers to a way of transport</rdfs:comment>
         <rdfs:label xml:lang="en">Transport</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1430,6 +1461,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#Category"/>
         <rdfs:comment xml:lang="en">Includes different attraction categories</rdfs:comment>
         <rdfs:label xml:lang="en">TransportCategory</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
@@ -1451,6 +1483,7 @@ Abel Bolance Olivares</terms:creator>
         <rdfs:subClassOf rdf:resource="https://purl.org/cityexplorer#CategoryTypes"/>
         <rdfs:comment xml:lang="en">Refers to the category of transports</rdfs:comment>
         <rdfs:label xml:lang="en">TransportType</rdfs:label>
+        <vs:term_status xml:lang="en">testing</vs:term_status>
     </owl:Class>
     
 
