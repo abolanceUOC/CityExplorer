@@ -12,6 +12,7 @@
      xmlns:CityExplorer="https://purl.org/cityexplorer#">
     <owl:Ontology rdf:about="https://purl.org/cityexplorer">
         <owl:versionIRI rdf:resource="https://purl.org/cityexplorer/1.0"/>    
+        <terms:created>2025-04-15</terms:created>
         <terms:creator xml:lang="en">Carles Asensi Seguer
 Sergi Tur Pinent
 Abel Bolance Olivares</terms:creator>
