@@ -8,7 +8,6 @@
      ontologyIRI="https://purl.org/cityexplorer#"
      versionIRI="https://purl.org/cityexplorer/1.0">
     <Prefix name="" IRI="https://purl.org/cityexplorer#"/>
-    <Prefix name="ce" IRI="https://purl.org/cityexplorer#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -20,6 +19,7 @@
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="schema" IRI="https://schema.org#"/>
     <Prefix name="CityExplorer" IRI="https://purl.org/cityexplorer#"/>
+    <Import>https://schema.org/version/latest/schemaorg-current-https.rdf</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
         <Literal>https://service.tib.eu/webvowl/
@@ -1855,10 +1855,19 @@ Abel Bolance Olivares</Literal>
         <NamedIndividual IRI="99_RestaurantGourmetValència"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:creator"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:identifier"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:license"/>
@@ -1877,15 +1886,6 @@ Abel Bolance Olivares</Literal>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="owl:equivalentClass"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:identifier"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:created"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="AndalusianRestaurant"/>
@@ -1946,6 +1946,10 @@ Abel Bolance Olivares</Literal>
                 <NamedIndividual IRI="Business"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="City"/>
+        <Class IRI="https://schema.org/City"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="CulturalAttraction"/>
@@ -19935,19 +19939,19 @@ Abel Bolance Olivares</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid2147484278"/>
-        <Literal xml:lang="en">An entity responsible for making the resource.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid2147484279"/>
+        <AnonymousIndividual nodeID="_:genid2147507187"/>
         <Literal xml:lang="en">An entity responsible for making the resource.
 http://purl.org/dc/terms/creator</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:genid2147484279"/>
+        <AnonymousIndividual nodeID="_:genid2147507187"/>
         <Literal xml:lang="en">creator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnonymousIndividual nodeID="_:genid2147507188"/>
+        <Literal xml:lang="en">An entity responsible for making the resource.</Literal>
     </AnnotationAssertion>
 </Ontology>
 

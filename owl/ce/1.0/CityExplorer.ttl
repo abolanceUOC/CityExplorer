@@ -1,5 +1,4 @@
 @prefix : <https://purl.org/cityexplorer#> .
-@prefix ce: <https://purl.org/cityexplorer#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -15,6 +14,7 @@
 
 <https://purl.org/cityexplorer#> rdf:type owl:Ontology ;
                                   owl:versionIRI <https://purl.org/cityexplorer/1.0> ;
+                                  owl:imports <https://schema.org/version/latest/schemaorg-current-https.rdf> ;
                                   terms:bibliographicCitation """https://service.tib.eu/webvowl/
 https://oops.linkeddata.es/
 https://dgarijo.github.io/Widoco/doc/tutorial/
@@ -430,6 +430,7 @@ CityExplorer:CategoryTypes rdf:type owl:Class ;
 
 ###  https://purl.org/cityexplorer#City
 CityExplorer:City rdf:type owl:Class ;
+                  owl:equivalentClass <https://schema.org/City> ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty CityExplorer:identifier ;
                                     owl:someValuesFrom xsd:string
@@ -6477,12 +6478,12 @@ CityExplorer:València rdf:type owl:NamedIndividual ,
                                                              CityExplorer:priceRange 48 .
 
 
-[ rdfs:comment "An entity responsible for making the resource."@en
-] .
-
 [ rdfs:comment """An entity responsible for making the resource.
 http://purl.org/dc/terms/creator"""@en ;
-   rdfs:label "creator"@en
+  rdfs:label "creator"@en
+] .
+
+[ rdfs:comment "An entity responsible for making the resource."@en
  ] .
 
 #################################################################
