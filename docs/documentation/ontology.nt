@@ -6,7 +6,7 @@
 <https://purl.org/cityexplorer#> <http://purl.org/dc/terms/creator> "Carles Asensi Seguer\nSergi Tur Pinent\nAbel Bolance Olivares"@en .
 <https://purl.org/cityexplorer#> <http://purl.org/dc/terms/description> "This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships. This ontology is part of a university project."@en .
 <https://purl.org/cityexplorer#> <http://purl.org/dc/terms/identifier> "https://purl.org/cityexplorer"@en .
-<https://purl.org/cityexplorer#> <http://purl.org/dc/terms/issued> "2025-05-21"@en .
+<https://purl.org/cityexplorer#> <http://purl.org/dc/terms/issued> "2025-04-21"@en .
 <https://purl.org/cityexplorer#> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en"@en .
 <https://purl.org/cityexplorer#> <http://purl.org/dc/terms/modified> "2025-04-21"@en .
 <https://purl.org/cityexplorer#> <http://purl.org/dc/terms/previousVersion> "https://purl.org/cityexplorer/1.0"@en .
