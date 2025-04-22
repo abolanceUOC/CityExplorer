@@ -22,7 +22,7 @@ Sergi Tur Pinent
 Abel Bolance Olivares"""@en ;
                                   <http://purl.org/dc/terms/description> "This ontology models personalized tourist experiences by representing cities, points of interest, events, accommodations, restaurants, transportation, and their relationships. This ontology is part of a university project."@en ;
                                   <http://purl.org/dc/terms/identifier> "https://purl.org/cityexplorer"@en ;
-                                  <http://purl.org/dc/terms/issued> "2025-05-21"@en ;
+                                  <http://purl.org/dc/terms/issued> "2025-04-21"@en ;
                                   <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en"@en ;
                                   <http://purl.org/dc/terms/modified> "2025-04-21"@en ;
                                   <http://purl.org/dc/terms/previousVersion> "https://purl.org/cityexplorer/1.0"@en ;
